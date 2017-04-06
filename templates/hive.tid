@@ -1,0 +1,6 @@
+title: $:/plugins/iceity/beehive/templates/hive
+tags: $:/tags/ViewTemplate
+
+<$list filter="[is[current]tag[hive]]">
+
+<<tabs "$:/plugins/iceity/beehive/views/listinspections $:/plugins/iceity/beehive/masks/newinspection" "$:/plugins/iceity/beehive/views/listinspections">>

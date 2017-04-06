@@ -1,0 +1,5 @@
+title: $:/plugins/iceity/beehive/views/hivetype
+caption: Hive Types
+option-type: hivetype
+
+<<list-links filter:"[tag{$:/plugins/iceity/beehive/views/hivetype!!option-type}]">>

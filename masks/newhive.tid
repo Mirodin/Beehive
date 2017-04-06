@@ -1,0 +1,45 @@
+title: $:/plugins/iceity/beehive/masks/newhive
+caption: New hive
+
+<$set name="tempTiddler" value="$:/temp/newHive">
+
+    ! Name
+    <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-name" />
+
+    ! Description
+    <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-description" />
+
+    ! Hive Type
+    <$select tiddler=<<tempTiddler>> field="hive-type">
+        <$list filter="[tag{$:/plugins/iceity/beehive/views/hivetype!!option-type}]">
+            <option><$view field="title" /></option>
+        </$list>
+    </$select>
+
+    ! Colony Source
+    <$select tiddler=<<tempTiddler>> field="hive-source">
+        <$list filter="[tag{$:/plugins/iceity/beehive/views/hivesource!!option-type}]">
+            <option><$view field="title" /></option>
+        </$list>
+    </$select>
+
+    ! Date
+    <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-date" placeholder=<<now YYYY-0MM-0DD>> />
+
+</$set>
+
+<$button>Save new Hive
+    <$set name="counter" value=<<nextid [tag[hive]] hive-id>>>
+        <$set name="newTitle" value=<<format "Hive-{0}" $(counter)$>>>
+            <$action-setfield $tiddler=<<newTitle>> hive-name={{$:/temp/newHive!!hive-name}} />
+            <$action-setfield $tiddler=<<newTitle>> hive-date={{$:/temp/newHive!!hive-date}} />
+            <$action-setfield $tiddler=<<newTitle>> hive-description={{$:/temp/newHive!!hive-description}} />
+            <$action-setfield $tiddler=<<newTitle>> hive-id=<<counter>> />
+            <$action-setfield $tiddler=<<newTitle>> hive-source={{$:/temp/newHive!!hive-source}} />
+            <$action-setfield $tiddler=<<newTitle>> hive-type={{$:/temp/newHive!!hive-type}} />
+            <$action-setfield $tiddler=<<newTitle>> tags="hive" />
+
+            <$action-navigate $to=<<newTitle>> />
+        </$set>
+    </$set>
+</$button>

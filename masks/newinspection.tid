@@ -1,0 +1,23 @@
+title: $:/plugins/iceity/beehive/masks/newinspection
+caption: New inspection
+
+<$set name="tempTiddler" value="$:/temp/newInspection">
+
+    ! Description
+    <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="inspection-description" />
+
+    ! Date
+    <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="inspection-date" placeholder=<<now YYYY-0MM-0DD>> />
+
+</$set>
+
+<$button>Save new Inspection
+    <$set name="counter" value=<<calc {{!!inspection-count}} 1>>>
+        <$set name="newTitle" value=<<format "Inspection-{0}-{1}" $(counter)$ {{!!hive-id}}>>>
+
+            <$action-setfield inspection-count=<<counter>> />
+
+            <<newTitle>>
+        </$set>
+    </$set>
+</$button>

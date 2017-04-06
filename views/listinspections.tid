@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/beehive/views/listinspections
+caption: List inspections
+
+\define table2(id)
+    <<table [tag[inspection]hive-id[$id$]] "title inspection-date inspection-type inspection-description" "UID Date Type Description">>
+\end
+
+<$macrocall $name="table2" id={{!!hive-id}} />

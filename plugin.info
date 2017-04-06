@@ -1,0 +1,9 @@
+{
+    "author": "Tristan Kohl",
+    "core-version": ">=5.0.8",
+    "description": "Beehive manager",
+    "list": "readme",
+    "plugin-type": "plugin",
+    "title": "$:/plugins/iceity/beehive",
+    "version": "0.0.1"
+}

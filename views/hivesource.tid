@@ -1,0 +1,5 @@
+title: $:/plugins/iceity/beehive/views/hivesource
+caption: Hive sources
+option-type: hivesource
+
+<<list-links filter:"[tag{$:/plugins/iceity/beehive/views/hivesource!!option-type}]">>
