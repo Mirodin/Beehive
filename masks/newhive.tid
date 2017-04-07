@@ -22,13 +22,14 @@ caption: New hive
     ! Date
     <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-date" placeholder=<<now YYYY-0MM-0DD>> />
 
-</$set>
-
-<$button>Create new Hive
-    <$set name="counter" value=<<nextid [tag[hive]] hive-id>>>
-        <$set name="newTitle" value=<<format "H-{0}" $(counter)$>>>
-            <$action-setfield $tiddler=<<newTitle>> hive-date={{$:/temp/newHive!!hive-date}} hive-description={{$:/temp/newHive!!hive-description}} hive-id=<<counter>> hive-name={{$:/temp/newHive!!hive-name}} hive-source={{$:/temp/newHive!!hive-source}} hive-type={{$:/temp/newHive!!hive-type}} tags="hive"/>
-            <$action-navigate $to=<<newTitle>> />
+    <$button>Create new Hive
+        <$set name="counter" value=<<nextid [tag[hive]] hive-id>>>
+            <$set name="newTitle" value=<<format "H-{0}" $(counter)$>>>
+                <$action-setfield $tiddler=<<tempTiddler>> title=<<newTitle>> />
+                <$action-setfield $tiddler=<<newTitle>> hive-id=<<counter>> tags="hive" />
+                <$action-navigate $to=<<newTitle>> />
+            </$set>
         </$set>
-    </$set>
-</$button>
+    </$button>
+
+</$set>
