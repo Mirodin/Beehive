@@ -16,12 +16,11 @@ Calculate simple expressions
     exports.params = [];
 
     exports.run = function ( str ) {
-        if ( arguments.length ) {
-            const t = typeof arguments[1];
-            const args = ( t === "string" || t === "number" ) ? Array.prototype.slice.call( arguments, 1 ) : arguments[1];
-            for ( let key in args ) {
-                str = str.replace( new RegExp( "\\{" + key + "\\}", "gi" ), args[key] );
-            }
+        const type = typeof arguments[1];
+        const args = ( type === "string" || type === "number" ) ? Array.prototype.slice.call( arguments, 1 ) : arguments[1];
+        const currentTiddler = this.getVariable( "currentTiddler" );
+        for ( let key in args ) {
+            str = str.replace( new RegExp( "\\{" + key + "\\}", "gi" ), this.wiki.getTextReference( args[key], args[key], currentTiddler ) );
         }
         return str;
     };
