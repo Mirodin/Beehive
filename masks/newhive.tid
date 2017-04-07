@@ -27,6 +27,7 @@ caption: New hive
             <$set name="newTitle" value=<<format "H-{0}" $(counter)$>>>
                 <$action-setfield $tiddler=<<tempTiddler>> title=<<newTitle>> />
                 <$action-setfield $tiddler=<<newTitle>> hive-id=<<counter>> tags="hive" />
+                <$action-deletetiddler $tiddler=<<tempTiddler>>/>
                 <$action-navigate $to=<<newTitle>> />
             </$set>
         </$set>
