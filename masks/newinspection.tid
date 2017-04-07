@@ -10,9 +10,9 @@ caption: New inspection
     <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="inspection-date" placeholder=<<now YYYY-0MM-0DD>> />
 
     ! Observations
-    <$checkbox tiddler=<<tempTiddler>> field="queen-seen" checked="true" unchecked="false">Queen seen</$checkbox>
+    <$checkbox tiddler=<<tempTiddler>> field="queen-seen" checked="yes" unchecked="">Queen seen</$checkbox>
 
-    <$checkbox tiddler=<<tempTiddler>> field="eggs-seen" checked="true" unchecked="false">Eggs seen</$checkbox>
+    <$checkbox tiddler=<<tempTiddler>> field="eggs-seen" checked="yes" unchecked="">Eggs seen</$checkbox>
 
     Laying pattern: <$select tiddler=<<tempTiddler>> field="laying-pattern">
         <option value="1">1: Poor</option>

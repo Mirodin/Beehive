@@ -2,3 +2,10 @@ title: $:/plugins/iceity/beehive/templates/inspeciton
 tags: $:/tags/ViewTemplate
 
 <$list filter="[is[current]tag[inspection]]">
+
+|!Date|{{!!inspection-date}}|
+|!Queen seen|{{!!queen-seen}}|
+|!Eggs seen|{{!!eggs-seen}}|
+|!Laying pattern|{{!!laying-pattern}}|
+|!Temperament|{{!!temperament}}|
+|!Notes|{{!!inspection-notes}}|
