@@ -1,7 +1,7 @@
 title: $:/plugins/iceity/beehive/masks/newinspection
 caption: New inspection
 
-<$set name="tempTiddler" value="$:/temp/newInspection">
+<$set name="tempTiddler" value=<<format "$:/temp/newInspection-{0}" !!title>>>
 
     ! Description
     <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="inspection-notes" />
