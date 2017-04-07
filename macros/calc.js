@@ -21,8 +21,8 @@ Calculate simple expressions
 
     exports.run = function ( base, value, operation ) {
         const currentTiddler = this.getVariable( "currentTiddler" );
-        base = parseFloat( base ) || parseFloat( this.wiki.getTextReference( base, 0, currentTiddler ) ) || 0;
-        value = parseFloat( value ) || parseFloat( this.wiki.getTextReference( value, 0, currentTiddler ) ) || 0;
+        base = parseFloat( base ) || parseFloat( this.wiki.getTextReference( base, 0, currentTiddler ) );
+        value = parseFloat( value ) || parseFloat( this.wiki.getTextReference( value, 0, currentTiddler ) );
         switch ( operation ){
             case "-": return base - value;
             case "*": return base * value;
