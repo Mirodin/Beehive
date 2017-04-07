@@ -12,12 +12,11 @@ caption: New inspection
 </$set>
 
 <$button>Save new Inspection
-    <$set name="counter" value=<<calc {{!!inspection-count}} 1>>>
-        <$set name="newTitle" value=<<format "Inspection-{0}-{1}" $(counter)$ {{!!hive-id}}>>>
+    <$set name="counter" value=<<calc !!inspection-count 1>>>
+        <$set name="newTitle" value=<<format "I-{0}/{1}" {{!!hive-id}} $(counter)$>>>
 
             <$action-setfield inspection-count=<<counter>> />
 
-            <<newTitle>>
         </$set>
     </$set>
 </$button>

@@ -20,14 +20,14 @@ Calculate simple expressions
     ];
 
     exports.run = function ( base, value, operation ) {
-        console.log(base, value);
-        const curr = parseFloat( base ) || 0;
-        const val = parseFloat( value ) || 0;
+        const currentTiddler = this.getVariable( "currentTiddler" );
+        base = parseFloat( base ) || parseFloat( this.wiki.getTextReference( base, 0, currentTiddler ) ) || 0;
+        value = parseFloat( value ) || parseFloat( this.wiki.getTextReference( value, 0, currentTiddler ) ) || 0;
         switch ( operation ){
-            case "-": return curr - val;
-            case "*": return curr * val;
-            case "/": return curr / val;
-            default: return curr + val;
+            case "-": return base - value;
+            case "*": return base * value;
+            case "/": return base / value;
+            default: return base + value;
         }
     };
 

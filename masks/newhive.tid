@@ -28,9 +28,9 @@ caption: New hive
 
 </$set>
 
-<$button>Save new Hive
+<$button>Create new Hive
     <$set name="counter" value=<<nextid [tag[hive]] hive-id>>>
-        <$set name="newTitle" value=<<format "Hive-{0}" $(counter)$>>>
+        <$set name="newTitle" value=<<format "H-{0}" $(counter)$>>>
             <$action-setfield $tiddler=<<newTitle>> hive-name={{$:/temp/newHive!!hive-name}} />
             <$action-setfield $tiddler=<<newTitle>> hive-date={{$:/temp/newHive!!hive-date}} />
             <$action-setfield $tiddler=<<newTitle>> hive-description={{$:/temp/newHive!!hive-description}} />
