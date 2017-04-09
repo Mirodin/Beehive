@@ -1,5 +1,12 @@
 title: $:/plugins/iceity/beehive/views/hivesource
 caption: Hive sources
-option-type: hivesource
 
-<<list-links filter:"[tag{$:/plugins/iceity/beehive/views/hivesource!!option-type}]">>
+<<table [tag[hivesource]] "title source-name" "UID Name">>
+
+<$button>New Source
+    <$set name="counter" value=<<nextid [tag[hivesource]] source-id>>>
+        <$set name="newTitle" value=<<format "S-{0}" $(counter)$>>>
+            <$action-sendmessage $message="tm-new-tiddler" title=<<newTitle>> tags="hivesource" source-id=<<counter>> source-name="" />
+        </$set>
+    </$set>
+</$button>

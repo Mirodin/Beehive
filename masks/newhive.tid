@@ -8,14 +8,14 @@ caption: New hive
     Description: <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-description" />
 
     Hive Type: <$select tiddler=<<tempTiddler>> field="hive-type">
-        <$list filter="[tag{$:/plugins/iceity/beehive/views/hivetype!!option-type}]">
-            <option><$view field="title" /></option>
+        <$list filter="[tag[hivetype]]">
+            <option value={{!!title}}><$view field="type-name" /></option>
         </$list>
     </$select>
 
     Colony Source: <$select tiddler=<<tempTiddler>> field="hive-source">
-        <$list filter="[tag{$:/plugins/iceity/beehive/views/hivesource!!option-type}]">
-            <option><$view field="title" /></option>
+        <$list filter="[tag[hivesource]]">
+            <option value={{!!title}}><$view field="source-name" /></option>
         </$list>
     </$select>
 
