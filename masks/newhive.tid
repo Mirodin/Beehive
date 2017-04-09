@@ -3,9 +3,9 @@ caption: New hive
 
 <$set name="tempTiddler" value="$:/temp/newHive">
 
-    Name: <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-name" />
+    Name: <$edit-text focus="true" tiddler=<<tempTiddler>> field="hive-name" />
 
-    Description: <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-description" />
+    Description: <$edit-text size="100" tiddler=<<tempTiddler>> field="hive-description" />
 
     Hive Type: <$select tiddler=<<tempTiddler>> field="hive-type">
         <$list filter="[tag[hivetype]]">
@@ -19,8 +19,7 @@ caption: New hive
         </$list>
     </$select>
 
-    ! Date
-    <$edit-text class="tc-edit-texteditor" tiddler=<<tempTiddler>> field="hive-date" placeholder=<<now YYYY-0MM-0DD>> />
+    Date: <$edit-text tiddler=<<tempTiddler>> field="hive-date" placeholder=<<now YYYY-0MM-0DD>> />
 
     <$button>Create new Hive
         <$set name="counter" value=<<nextid [tag[hive]] hive-id>>>
