@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/beehive/templates/task
+tags: $:/tags/ViewTemplate
+
+<$list filter="[is[current]tag[task]]">
+
+<$fieldmangler>
+    <$button message="tm-add-tag" param="done">Done</$button>
+</$fieldmangler>
