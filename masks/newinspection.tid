@@ -35,7 +35,7 @@ caption: New inspection
             <$set name="newTitle" value=<<format "I-{0}/{1}" !!hive-id $(counter)$>>>
                 <$action-setfield inspection-count=<<counter>> />
                 <$action-setfield $tiddler=<<tempTiddler>> title=<<newTitle>> />
-                <$action-setfield $tiddler=<<newTitle>> hive-id={{!!hive-id}} tags="inspection" />
+                <$action-setfield $tiddler=<<newTitle>> hive={{!!title}} tags="inspection" />
                 <$action-deletetiddler $tiddler=<<tempTiddler>> />
                 <$action-navigate $to=<<newTitle>> />
             </$set>

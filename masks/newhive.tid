@@ -9,13 +9,13 @@ caption: New hive
 
     Hive Type: <$select tiddler=<<tempTiddler>> field="hive-type">
         <$list filter="[tag[hivetype]]">
-            <option value={{!!type-id}}>{{!!title}}</option>
+            <option value={{!!title}}>{{!!type-name}}</option>
         </$list>
     </$select>
 
     Colony Source: <$select tiddler=<<tempTiddler>> field="hive-source">
         <$list filter="[tag[hivesource]]">
-            <option value={{!!source-id}}>{{!!title}}</option>
+            <option value={{!!title}}>{{!!source-name}}</option>
         </$list>
     </$select>
 
