@@ -1,10 +1,12 @@
 title: $:/plugins/iceity/beehive/views/hivetype
 caption: Hive Types
 
-<<table [tag[hivetype]] "title" "Name">>
+<<table [tag[hivetype]] "title type-name" "UID Name">>
 
 <$button>New Type
     <$set name="counter" value=<<nextid [tag[hivetype]] type-id>>>
-        <$action-sendmessage $message="tm-new-tiddler" title="New HiveType" tags="hivetype" type-id=<<counter>> />
+        <$set name="newTitle" value=<<format "T-{0}" $(counter)$>>>
+            <$action-sendmessage $message="tm-new-tiddler" title=<<newTitle>> tags="hivetype" type-id=<<counter>> type-name="" />
+        </$set>
     </$set>
 </$button>
