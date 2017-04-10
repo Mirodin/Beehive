@@ -3,4 +3,12 @@ tags: $:/tags/ViewTemplate
 
 <$list filter="[is[current]tag[hive]]">
 
+! Details
+
+|!Name|{{!!hive-name}}|
+|!Hive type|<$transclude tiddler={{!!hive-type}} field="type-name" />|
+|!Source|<$transclude tiddler={{!!hive-source}} field="source-name" />|
+|!Description|{{!!hive-description}}|
+|!Inspections|{{!!inspection-count}}|
+
 <<tabs "$:/plugins/iceity/beehive/views/listinspections $:/plugins/iceity/beehive/masks/newinspection" "$:/plugins/iceity/beehive/views/listinspections">>
