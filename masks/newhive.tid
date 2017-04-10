@@ -25,7 +25,7 @@ caption: New hive
         <$set name="counter" value=<<nextid [tag[hive]] hive-id>>>
             <$set name="newTitle" value=<<format "H-{0}" $(counter)$>>>
                 <$action-setfield $tiddler=<<tempTiddler>> title=<<newTitle>> />
-                <$action-setfield $tiddler=<<newTitle>> tags="hive" hive-id=<<counter>> inspection-count="0"/>
+                <$action-setfield $tiddler=<<newTitle>> tags="active hive" hive-id=<<counter>> inspection-count="0" task-count="0" />
                 <$action-deletetiddler $tiddler=<<tempTiddler>>/>
                 <$action-navigate $to=<<newTitle>> />
             </$set>
