@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/beehive/templates/inspeciton
+title: $:/plugins/iceity/beehive/templates/inspection
 tags: $:/tags/ViewTemplate
 
 <$list filter="[is[current]tag[inspection]]">
