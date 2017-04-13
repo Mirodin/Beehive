@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/beehive/views/hivetype
+title: $:/plugins/iceity/beehive/views/hivetypes
 caption: Hive Types
 
 <<table [tag[hivetype]] "title type-name" "UID Name">>

@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/beehive/views/hivesource
+title: $:/plugins/iceity/beehive/views/hivesources
 caption: Hive sources
 
 <<table [tag[hivesource]] "title source-name" "UID Name">>
