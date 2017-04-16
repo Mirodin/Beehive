@@ -1,4 +1,3 @@
 title: BeeHive
-list: $:/plugins/iceity/beehive/views/stats
 
 <<tabs "$:/plugins/iceity/beehive/views/tasks $:/plugins/iceity/beehive/views/hives $:/plugins/iceity/beehive/views/hivesources $:/plugins/iceity/beehive/views/hivetypes $:/plugins/iceity/beehive/views/stats" "$:/plugins/iceity/beehive/views/tasks">>
