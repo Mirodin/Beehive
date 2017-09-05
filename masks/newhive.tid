@@ -5,7 +5,7 @@ caption: New hive
 
     Name: <$edit-text focus="true" tiddler=<<tempTiddler>> field="hive-name" />
 
-    Description: <$edit-text size="100" tiddler=<<tempTiddler>> field="hive-description" />
+    Description: <$edit-text tiddler=<<tempTiddler>> field="hive-description" />
 
     Hive Type: <$select tiddler=<<tempTiddler>> field="hive-type">
         <$list filter="[tag[hivetype]]">
