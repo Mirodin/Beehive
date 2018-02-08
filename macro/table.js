@@ -1,6 +1,6 @@
 /*\
 
-title: $:/plugins/iceity/beehive/macros/table.js
+title: $:/plugins/iceity/beehive/macro/table.js
 module-type: macro
 type: application/javascript
 

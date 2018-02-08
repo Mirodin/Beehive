@@ -1,4 +1,0 @@
-title: $:/plugins/iceity/beehive/views/hives
-caption: Hives
-
-<<tabs "$:/plugins/iceity/beehive/views/listhives $:/plugins/iceity/beehive/masks/newhive" "$:/plugins/iceity/beehive/views/listhives">>

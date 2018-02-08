@@ -1,0 +1,17 @@
+title: $:/plugins/iceity/beehive/mask/config/source
+caption: New Source
+
+<$set name="tempTiddler" value="$:/temp/newSource">
+
+    Name: <$edit-text tiddler=<<tempTiddler>> field="name" />
+
+    Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />
+
+    <$button>Create new Treatment
+        <$action-setfield $tiddler=<<tempTiddler>> tags="source" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>
+
+<<table [tag[source]] "title name text" "UID Name Notes">>

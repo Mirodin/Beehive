@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/beehive/view/list/hiveaction
+caption: Actions
+
+\define makefilter() [tag[action]hive[$(title)$]]
+
+<$vars title={{!!title}}>
+    <$macrocall $name="table" filter=<<makefilter>> fields="title date text" headings="UID Date Notes"/>
+</$vars>

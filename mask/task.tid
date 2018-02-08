@@ -1,0 +1,15 @@
+title: $:/plugins/iceity/beehive/mask/task
+caption: New task
+
+<$set name="tempTiddler" value="$:/temp/newTask">
+
+    Due: <$edit-text tiddler=<<tempTiddler>> field="due" focus="true" type="date" />
+
+    Task: <$edit-text tiddler=<<tempTiddler>> tag="input" default="" />
+
+    <$button>Create new Task
+        <$action-setfield $tiddler=<<tempTiddler>> hive={{!!title}} tags="task" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>

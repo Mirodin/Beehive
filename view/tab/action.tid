@@ -1,0 +1,13 @@
+title: $:/plugins/iceity/beehive/view/tab/action
+caption: New Action
+
+<$set name="tempTiddler" value="$:/temp/newAction">
+
+    <<tabs "$:/plugins/iceity/beehive/mask/action/general $:/plugins/iceity/beehive/mask/action/observation $:/plugins/iceity/beehive/mask/action/feeding $:/plugins/iceity/beehive/mask/action/treatment $:/plugins/iceity/beehive/mask/action/harvest" "$:/plugins/iceity/beehive/mask/action/general" "$:/state/tab/action" "tc-vertical">>
+
+    <$button>Create new Action
+        <$action-setfield $tiddler=<<tempTiddler>> hive={{!!title}} tags="action" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>

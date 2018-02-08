@@ -1,0 +1,34 @@
+title: $:/plugins/iceity/beehive/mask/action/observation
+caption: Observations
+
+<$checkbox tiddler=<<tempTiddler>> field="brood" checked="1" unchecked="0">Brood seen</$checkbox>
+
+<$checkbox tiddler=<<tempTiddler>> field="pins" checked="1" unchecked="0">Pins seen</$checkbox>
+
+<$checkbox tiddler=<<tempTiddler>> field="queen" checked="1" unchecked="0">Queen seen</$checkbox>
+
+Mite drop: <$edit-text tiddler=<<tempTiddler>> field="mites" placeholder="mites/day" type="number" />
+
+Population: <$select tiddler=<<tempTiddler>> field="population">
+    <option value="5">5: Very Good</option>
+    <option value="4">4: Good</option>
+    <option value="3">3: OK</option>
+    <option value="2">2: Moderate</option>
+    <option value="1">1: Poor</option>
+</$select>
+
+Laying pattern: <$select tiddler=<<tempTiddler>> field="laying-pattern">
+    <option value="5">5: Very Good</option>
+    <option value="4">4: Good</option>
+    <option value="3">3: OK</option>
+    <option value="2">2: Moderate</option>
+    <option value="1">1: Poor</option>
+</$select>
+
+Temperament: <$select tiddler=<<tempTiddler>> field="temperament">
+    <option value="5">5: Very Good</option>
+    <option value="4">4: Good</option>
+    <option value="3">3: OK</option>
+    <option value="2">2: Moderate</option>
+    <option value="1">1: Poor</option>
+</$select>

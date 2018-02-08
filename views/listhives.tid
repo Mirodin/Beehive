@@ -1,4 +1,0 @@
-title: $:/plugins/iceity/beehive/views/listhives
-caption: List hives
-
-<<table [tag[hive]tag[active]] "title hive-name hive-date hive-description" "UID Name Date Description">>

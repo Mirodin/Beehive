@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/beehive/mask/action/harvest
+caption: Harvest
+
+Date: <$edit-text tiddler=<<tempTiddler>> field="harvest-date" focus="true" type="date" />
+
+Amount: <$edit-text tiddler=<<tempTiddler>> field="harvest-amount" placeholder="kg" type="number" />
+
+Moisture: <$edit-text tiddler=<<tempTiddler>> field="harvest-moisture" placeholder="%" type="number" />

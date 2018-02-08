@@ -1,3 +1,3 @@
 title: BeeHive
 
-<<tabs "$:/plugins/iceity/beehive/views/tasks $:/plugins/iceity/beehive/views/hives $:/plugins/iceity/beehive/views/hivesources $:/plugins/iceity/beehive/views/hivetypes $:/plugins/iceity/beehive/views/stats" "$:/plugins/iceity/beehive/views/tasks">>
+<<tabs "$:/plugins/iceity/beehive/view/list/task $:/plugins/iceity/beehive/view/list/hive $:/plugins/iceity/beehive/view/list/action $:/plugins/iceity/beehive/mask/hive $:/plugins/iceity/beehive/view/tab/config" "$:/plugins/iceity/beehive/view/list/task" "$:/state/tab/beehive">>

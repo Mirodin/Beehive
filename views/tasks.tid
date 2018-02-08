@@ -1,4 +1,0 @@
-title: $:/plugins/iceity/beehive/views/tasks
-caption: Tasks
-
-<<table [tag[task]!tag[done]sort[due-date]] "title due-date text" "UID Due Description">>

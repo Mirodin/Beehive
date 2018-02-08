@@ -1,0 +1,17 @@
+title: $:/plugins/iceity/beehive/mask/config/beekeeper
+caption: Beekeeper
+
+<$set name="tempTiddler" value="$:/temp/newBeekeeper">
+
+    Name: <$edit-text tiddler=<<tempTiddler>> field="name" />
+
+    Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />
+
+    <$button>Create new Beekeeper
+        <$action-setfield $tiddler=<<tempTiddler>> tags="beekeeper" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>
+
+<<table [tag[beekeeper]] "title name text" "UID Name Notes">>

@@ -1,6 +1,0 @@
-title: $:/plugins/iceity/beehive/views/listinspections
-caption: List inspections
-
-<$set name="filter" value=<<format "[tag[inspection]hive[{0}]!sort[]]" !!title>>>
-    <$macrocall $name="table" filter=<<filter>> fields="title inspection-date inspection-notes" headings="UID Date Notes" />
-</$set>

@@ -1,0 +1,25 @@
+title: $:/plugins/iceity/beehive/mask/config/type
+caption: New Type
+
+<$set name="tempTiddler" value="$:/temp/newType">
+
+    Name: <$edit-text tiddler=<<tempTiddler>> field="name" />
+
+    Height: <$edit-text tiddler=<<tempTiddler>> field="height" placeholder="mm" type="number" />
+    Width: <$edit-text tiddler=<<tempTiddler>> field="width" placeholder="mm" type="number" />
+
+    Frame count: <$edit-text tiddler=<<tempTiddler>> field="count" type="number" />
+
+    Frame height: <$edit-text tiddler=<<tempTiddler>> field="frame-height" placeholder="mm" type="number" />
+    Frame width: <$edit-text tiddler=<<tempTiddler>> field="frame-width" placeholder="mm" type="number" />
+
+    Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />
+
+    <$button>Create new Type
+        <$action-setfield $tiddler=<<tempTiddler>> tags="type" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>
+
+<<table [tag[type]] "title name height width count frame-height frame-width text" "UID Name Height Width Frames Frame-Heigth Frame-Width Notes">>
