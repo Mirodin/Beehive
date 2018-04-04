@@ -7,7 +7,7 @@ caption: New Source
 
     Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />
 
-    <$button>Create new Treatment
+    <$button>Create new Source
         <$action-setfield $tiddler=<<tempTiddler>> tags="source" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>

@@ -9,7 +9,7 @@ caption: Observations
 
 Mite drop: <$edit-text tiddler=<<tempTiddler>> field="mites" placeholder="mites/day" type="number" />
 
-Population: <$select tiddler=<<tempTiddler>> field="population">
+Brood pattern: <$select tiddler=<<tempTiddler>> field="brood-pattern">
     <option value="5">5: Very Good</option>
     <option value="4">4: Good</option>
     <option value="3">3: OK</option>
@@ -17,7 +17,7 @@ Population: <$select tiddler=<<tempTiddler>> field="population">
     <option value="1">1: Poor</option>
 </$select>
 
-Laying pattern: <$select tiddler=<<tempTiddler>> field="laying-pattern">
+Population: <$select tiddler=<<tempTiddler>> field="population">
     <option value="5">5: Very Good</option>
     <option value="4">4: Good</option>
     <option value="3">3: OK</option>

@@ -13,10 +13,7 @@ Return new UID for tiddler title
 
     exports.name = "uid";
 
-    exports.params = [
-        { name: "filter" },
-        { name: "field" }
-    ];
+    exports.params = [];
 
     exports.run = function () {
         let newID;

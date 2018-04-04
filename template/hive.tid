@@ -9,8 +9,4 @@ tags: $:/tags/ViewTemplate
 |!Hive type|<$transclude tiddler={{!!type-id}} field="name" />|
 |!Source|<$transclude tiddler={{!!source-id}} field="name" />|
 
-<$set name="activeTiddler" value={{!!title}}>
-
-    <<tabs "$:/plugins/iceity/beehive/view/list/hivetask $:/plugins/iceity/beehive/view/list/hiveaction $:/plugins/iceity/beehive/mask/task $:/plugins/iceity/beehive/view/tab/action" "$:/plugins/iceity/beehive/view/list/action" "$:/plugins/iceity/beehive/view/list/hivetask ">>
-
-</$set>
+<<tabs "$:/plugins/iceity/beehive/view/list/hivetask $:/plugins/iceity/beehive/view/list/hiveaction $:/plugins/iceity/beehive/mask/task $:/plugins/iceity/beehive/view/tab/action" "$:/plugins/iceity/beehive/view/list/action" "$:/plugins/iceity/beehive/view/list/hivetask ">>

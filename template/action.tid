@@ -5,7 +5,7 @@ tags: $:/tags/ViewTemplate
 
 |!General|<|
 |!Date|{{!!date}}|
-|!Beekeeper|{{!!beekeeper}}|
+|!Beekeeper|<$transclude tiddler={{!!beekeeper}} field="name" />|
 |!Temparature|{{!!temperature}} °C|
 |!Weather|{{!!weather}}|
 
@@ -15,7 +15,7 @@ tags: $:/tags/ViewTemplate
 |!Queen seen|{{!!queen}}|
 |!Mite drop|{{!!mites}}|
 |!Population|{{!!population}}|
-|!Laying pattern|{{!!laying-pattern}}|
+|!Brood pattern|{{!!brood-pattern}}|
 |!Temperament|{{!!temperament}}|
 
 |!Feeding|<|
