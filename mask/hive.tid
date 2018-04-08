@@ -21,6 +21,12 @@ caption: New hive
         </$list>
     </$select>
 
+    Parent Colony: <$select tiddler=<<tempTiddler>> field="parent-id">
+        <$list filter="[tag[active]tag[hive]]">
+            <option value={{!!title}}>{{!!name}}</option>
+        </$list>
+    </$select>
+
     <$button>Create new Hive
         <$action-setfield $tiddler=<<tempTiddler>> tags="active hive" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
