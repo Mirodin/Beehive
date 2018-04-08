@@ -1,5 +1,5 @@
 title: $:/plugins/iceity/beehive/mask/config/type
-caption: New Type
+caption: Types
 
 <$set name="tempTiddler" value="$:/temp/newType">
 

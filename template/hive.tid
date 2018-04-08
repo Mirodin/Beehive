@@ -8,6 +8,6 @@ tags: $:/tags/ViewTemplate
 |!Created|{{!!date}}|
 |!Hive type|<$transclude tiddler={{!!type-id}} field="name" />|
 |!Source|<$transclude tiddler={{!!source-id}} field="name" />|
-|!Parent|<$transclude tiddler={{!!parent-id}} field="name" />|
+|!Parent|<$link to={{!!parent-id}}><$transclude tiddler={{!!parent-id}} field="name" /></$link>|
 
 <<tabs "$:/plugins/iceity/beehive/view/list/hivetask $:/plugins/iceity/beehive/view/list/hiveaction $:/plugins/iceity/beehive/mask/task $:/plugins/iceity/beehive/view/tab/action" "$:/plugins/iceity/beehive/view/list/action" "$:/plugins/iceity/beehive/view/list/hivetask ">>

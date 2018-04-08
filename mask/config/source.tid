@@ -1,5 +1,5 @@
 title: $:/plugins/iceity/beehive/mask/config/source
-caption: New Source
+caption: Sources
 
 <$set name="tempTiddler" value="$:/temp/newSource">
 

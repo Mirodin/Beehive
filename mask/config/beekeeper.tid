@@ -1,5 +1,5 @@
 title: $:/plugins/iceity/beehive/mask/config/beekeeper
-caption: Beekeeper
+caption: Beekeepers
 
 <$set name="tempTiddler" value="$:/temp/newBeekeeper">
 

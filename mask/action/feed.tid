@@ -1,5 +1,5 @@
-title: $:/plugins/iceity/beehive/mask/action/feeding
-caption: Feeding
+title: $:/plugins/iceity/beehive/mask/action/feed
+caption: Feed
 
 Feed: <$select tiddler=<<tempTiddler>> field="feed" focus="true">
     <$list filter="[tag[feed]]">

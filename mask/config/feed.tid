@@ -1,5 +1,5 @@
 title: $:/plugins/iceity/beehive/mask/config/feed
-caption: New Feed
+caption: Feeds
 
 <$set name="tempTiddler" value="$:/temp/newFeed">
 

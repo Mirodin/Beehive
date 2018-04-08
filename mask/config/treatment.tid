@@ -1,5 +1,5 @@
 title: $:/plugins/iceity/beehive/mask/config/treatment
-caption: New Treatment
+caption: Treatments
 
 <$set name="tempTiddler" value="$:/temp/newTreatment">
 
