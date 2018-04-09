@@ -8,4 +8,4 @@ tags: $:/tags/ViewTemplate
 |!Due|{{!!date}}|
 |!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
 
-Done: <$checkbox field="done" checked=1 unchecked="0" />
+Done: <$checkbox field="done" checked="1" unchecked="0" />

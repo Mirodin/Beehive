@@ -25,11 +25,11 @@ caption: New Inspection
 
     ! Observations
 
-    <$checkbox tiddler=<<tempTiddler>> field="brood" checked="1" unchecked="0">Brood seen</$checkbox>
+    <$checkbox tiddler=<<tempTiddler>> field="brood" checked="yes" unchecked="no">Brood seen</$checkbox>
 
-    <$checkbox tiddler=<<tempTiddler>> field="pins" checked="1" unchecked="0">Pins seen</$checkbox>
+    <$checkbox tiddler=<<tempTiddler>> field="pins" checked="yes" unchecked="no">Pins seen</$checkbox>
 
-    <$checkbox tiddler=<<tempTiddler>> field="queen" checked="1" unchecked="0">Queen seen</$checkbox>
+    <$checkbox tiddler=<<tempTiddler>> field="queen" checked="yes" unchecked="no">Queen seen</$checkbox>
 
     Mite drop: <$edit-text tiddler=<<tempTiddler>> field="mites" placeholder="mites/day" type="number" />
 
