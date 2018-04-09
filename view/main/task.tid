@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/beehive/view/list/task
+title: $:/plugins/iceity/beehive/view/main/task
 caption: Tasks
 
 <<table [tag[task]!tag[done]sort[due]] "hive due text" "Hive Due Task">>

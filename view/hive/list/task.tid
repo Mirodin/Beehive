@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/beehive/view/hive/list/task
+caption: Tasks
+
+\define makefilter() [tag[task]hive-id[$(title)$]done[0]sort[date]]
+
+<$vars title={{!!title}}>
+    <$macrocall $name="table" filter=<<makefilter>> fields="title date text" headings="UID Due Notes"/>
+</$vars>

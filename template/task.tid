@@ -1,10 +1,11 @@
-title: $:/plugins/iceity/beehive/templates/task
+title: $:/plugins/iceity/beehive/template/task
 tags: $:/tags/ViewTemplate
 
 <$list filter="[is[current]tag[task]]">
 
-''Due: {{!!due}}''
+! Details
 
-<$fieldmangler>
-    <$button message="tm-add-tag" param="done">Done</$button>
-</$fieldmangler>
+|!Due|{{!!date}}|
+|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+
+Done: <$checkbox field="done" checked=1 unchecked="0" />

@@ -1,0 +1,21 @@
+title: $:/plugins/iceity/beehive/template/inspection
+tags: $:/tags/ViewTemplate
+
+<$list filter="[is[current]tag[inspection]]">
+
+! Details
+
+|!Date|{{!!date}}|
+|!Temparature|{{!!temperature}} °C|
+|!Weather|{{!!weather}}|
+|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+
+!! Observations
+
+|!Brood seen|{{!!brood}}|
+|!Pins seen|{{!!pins}}|
+|!Queen seen|{{!!queen}}|
+|!Mite drop|{{!!mites}}|
+|!Population|{{!!population}}|
+|!Brood pattern|{{!!pattern}}|
+|!Temperament|{{!!temperament}}|

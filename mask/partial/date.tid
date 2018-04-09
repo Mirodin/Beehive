@@ -1,0 +1,3 @@
+title: $:/plugins/iceity/beehive/mask/partial/date
+
+Date: <$edit-text tiddler=<<tempTiddler>> field="date" type="date" />

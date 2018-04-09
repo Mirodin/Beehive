@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/beehive/view/main/hive
+caption: Hives
+
+<$macrocall
+    $name="tabs"
+    tabsList="$:/plugins/iceity/beehive/view/main/listhive $:/plugins/iceity/beehive/mask/hive"
+    default="$:/plugins/iceity/beehive/view/main/listhive"
+    class="tc-vertical"
+/>

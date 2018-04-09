@@ -1,0 +1,3 @@
+title: $:/plugins/iceity/beehive/mask/partial/note
+
+Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />

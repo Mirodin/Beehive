@@ -1,0 +1,3 @@
+title: $:/plugins/iceity/beehive/mask/partial/name
+
+Name: <$edit-text tiddler=<<tempTiddler>> field="name" />

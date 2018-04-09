@@ -3,12 +3,12 @@ caption: New task
 
 <$set name="tempTiddler" value="$:/temp/newTask">
 
-    Due: <$edit-text tiddler=<<tempTiddler>> field="due" focus="true" type="date" />
+    {{$:/plugins/iceity/beehive/mask/partial/name}}
 
-    Task: <$edit-text tiddler=<<tempTiddler>> tag="input" default="" />
+    {{$:/plugins/iceity/beehive/mask/partial/action}}
 
-    <$button>Create new Task
-        <$action-setfield $tiddler=<<tempTiddler>> hive={{!!title}} tags="task" title=<<uid>> />
+    <$button>Save new Task
+        <$action-setfield $tiddler=<<tempTiddler>> done="0" hive-id={{!!title}} tags="task" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
 

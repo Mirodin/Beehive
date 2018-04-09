@@ -1,0 +1,65 @@
+title: $:/plugins/iceity/beehive/mask/inspection
+caption: New Inspection
+
+<$set name="tempTiddler" value="$:/temp/newInspection">
+
+    ! General
+
+    Temperature: <$edit-text tiddler=<<tempTiddler>> field="temperature" placeholder="°C" type="number" />
+
+    Weather conditions: <$select tiddler=<<tempTiddler>> field="weather">
+        <option value="1">Sunny</option>
+        <option value="2">Partial clouds</option>
+        <option value="3">Clouds</option>
+        <option value="4">Heavy clouds</option>
+        <option value="5">Drizzle</option>
+        <option value="6">Partial rain</option>
+        <option value="7">Rain</option>
+        <option value="8">Fog</option>
+        <option value="9">Snow</option>
+        <option value="10">Storm</option>
+        <option value="11">Thunderstorm</option>
+    </$select>
+
+    {{$:/plugins/iceity/beehive/mask/partial/action}}
+
+    ! Observations
+
+    <$checkbox tiddler=<<tempTiddler>> field="brood" checked="1" unchecked="0">Brood seen</$checkbox>
+
+    <$checkbox tiddler=<<tempTiddler>> field="pins" checked="1" unchecked="0">Pins seen</$checkbox>
+
+    <$checkbox tiddler=<<tempTiddler>> field="queen" checked="1" unchecked="0">Queen seen</$checkbox>
+
+    Mite drop: <$edit-text tiddler=<<tempTiddler>> field="mites" placeholder="mites/day" type="number" />
+
+    Brood pattern: <$select tiddler=<<tempTiddler>> field="pattern">
+        <option value="5">5: Very Good</option>
+        <option value="4">4: Good</option>
+        <option value="3">3: OK</option>
+        <option value="2">2: Moderate</option>
+        <option value="1">1: Poor</option>
+    </$select>
+
+    Population: <$select tiddler=<<tempTiddler>> field="population">
+        <option value="5">5: Very Good</option>
+        <option value="4">4: Good</option>
+        <option value="3">3: OK</option>
+        <option value="2">2: Moderate</option>
+        <option value="1">1: Poor</option>
+    </$select>
+
+    Temperament: <$select tiddler=<<tempTiddler>> field="temperament">
+        <option value="5">5: Very Good</option>
+        <option value="4">4: Good</option>
+        <option value="3">3: OK</option>
+        <option value="2">2: Moderate</option>
+        <option value="1">1: Poor</option>
+    </$select>
+
+    <$button>Save new Inspection
+        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="inspection" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>

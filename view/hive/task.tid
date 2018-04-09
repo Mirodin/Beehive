@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/beehive/view/hive/task
+caption: Tasks
+
+<$macrocall
+    $name="tabs"
+    tabsList="$:/plugins/iceity/beehive/view/hive/list/task $:/plugins/iceity/beehive/mask/task"
+    default="$:/plugins/iceity/beehive/view/hive/list/task"
+    class="tc-vertical"
+/>

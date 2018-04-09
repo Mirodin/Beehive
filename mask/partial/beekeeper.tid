@@ -1,0 +1,7 @@
+title: $:/plugins/iceity/beehive/mask/partial/beekeeper
+
+Beekeeper: <$select tiddler=<<tempTiddler>> field="beekeeper-id">
+    <$list filter="[tag[beekeeper]]">
+        <option value={{!!title}}>{{!!name}}</option>
+    </$list>
+</$select>

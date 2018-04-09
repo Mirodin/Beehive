@@ -1,0 +1,11 @@
+title: $:/plugins/iceity/beehive/template/harvest
+tags: $:/tags/ViewTemplate
+
+<$list filter="[is[current]tag[harvest]]">
+
+! Details
+
+|!Date|{{!!date}}|
+|!Moisture|{{!!moisture}} %|
+|!Amount|{{!!amount}} kg|
+|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|

@@ -3,11 +3,7 @@ caption: New hive
 
 <$set name="tempTiddler" value="$:/temp/newHive">
 
-    Name: <$edit-text tiddler=<<tempTiddler>> field="name" focus="true" />
-
-    Date: <$edit-text tiddler=<<tempTiddler>> field="date" type="date" />
-
-    Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />
+    {{$:/plugins/iceity/beehive/mask/partial/name}}
 
     Hive Type: <$select tiddler=<<tempTiddler>> field="type-id">
         <$list filter="[tag[type]]">
@@ -22,13 +18,15 @@ caption: New hive
     </$select>
 
     Parent Colony: <$select tiddler=<<tempTiddler>> field="parent-id">
-        <$list filter="[tag[active]tag[hive]]">
+        <$list filter="[active[yes]tag[hive]]">
             <option value={{!!title}}>{{!!name}}</option>
         </$list>
     </$select>
 
-    <$button>Create new Hive
-        <$action-setfield $tiddler=<<tempTiddler>> tags="active hive" title=<<uid>> />
+    {{$:/plugins/iceity/beehive/mask/partial/action}}
+
+    <$button>Save new Hive
+        <$action-setfield $tiddler=<<tempTiddler>> active="yes" tags="hive" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
 

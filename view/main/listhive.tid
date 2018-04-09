@@ -1,0 +1,4 @@
+title: $:/plugins/iceity/beehive/view/main/listhive
+caption: Hives
+
+<<table [tag[hive]active[yes]] "title name date text" "UID Name Date Notes">>

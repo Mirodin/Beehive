@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/beehive/view/hive/queen
+caption: Queen
+
+<$macrocall
+    $name="tabs"
+    tabsList="$:/plugins/iceity/beehive/view/hive/list/queen $:/plugins/iceity/beehive/mask/queen"
+    default="$:/plugins/iceity/beehive/view/hive/list/queen"
+    class="tc-vertical"
+/>

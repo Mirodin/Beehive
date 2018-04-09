@@ -1,0 +1,11 @@
+title: $:/plugins/iceity/beehive/template/feed
+tags: $:/tags/ViewTemplate
+
+<$list filter="[is[current]tag[feed]]">
+
+! Details
+
+|!Date|{{!!date}}|
+|!Feed|{{!!feed}}|
+|!Amount|{{!!amount}} l|
+|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|

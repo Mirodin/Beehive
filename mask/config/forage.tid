@@ -1,0 +1,19 @@
+title: $:/plugins/iceity/beehive/mask/config/forage
+caption: Forages
+
+<$set name="tempTiddler" value="$:/temp/newFeed">
+
+    {{$:/plugins/iceity/beehive/mask/partial/name}}
+
+    Company: <$edit-text tiddler=<<tempTiddler>> field="company" />
+
+    {{$:/plugins/iceity/beehive/mask/partial/note}}
+
+    <$button>Save new Forage
+        <$action-setfield $tiddler=<<tempTiddler>> tags="forage" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>
+
+<<table [tag[forage]] "title name company text" "UID Name Company Notes">>

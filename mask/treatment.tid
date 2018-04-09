@@ -1,0 +1,21 @@
+title: $:/plugins/iceity/beehive/mask/treatment
+caption: New Treatment
+
+<$set name="tempTiddler" value="$:/temp/newTreatment">
+
+    Treatment: <$select tiddler=<<tempTiddler>> field="medication-id" >
+        <$list filter="[tag[medication]]">
+            <option value={{!!title}}>{{!!name}}</option>
+        </$list>
+    </$select>
+
+    Amount: <$edit-text tiddler=<<tempTiddler>> field="amount" placeholder="ml" type="number" />
+
+    {{$:/plugins/iceity/beehive/mask/partial/action}}
+
+    <$button>Save new Treatment
+        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="treatment" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>

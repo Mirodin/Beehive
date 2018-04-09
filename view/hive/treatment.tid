@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/beehive/view/hive/treatment
+caption: Treatments
+
+<$macrocall
+    $name="tabs"
+    tabsList="$:/plugins/iceity/beehive/view/hive/list/treatment $:/plugins/iceity/beehive/mask/treatment"
+    default="$:/plugins/iceity/beehive/view/hive/list/treatment"
+    class="tc-vertical"
+/>

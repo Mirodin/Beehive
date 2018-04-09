@@ -4,10 +4,14 @@ tags: $:/tags/ViewTemplate
 <$list filter="[is[current]tag[hive]]">
 
 ! Details
+
 |!Name|{{!!name}}|
+|!Active|<$checkbox field="active" checked="yes" unchecked="no" />|
 |!Created|{{!!date}}|
 |!Hive type|<$transclude tiddler={{!!type-id}} field="name" />|
+|!Queen|<$link to={{!!queen-id}}><$transclude tiddler={{!!queen-id}} field="name" /></$link>|
 |!Source|<$transclude tiddler={{!!source-id}} field="name" />|
 |!Parent|<$link to={{!!parent-id}}><$transclude tiddler={{!!parent-id}} field="name" /></$link>|
+|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
 
-<<tabs "$:/plugins/iceity/beehive/view/list/hivetask $:/plugins/iceity/beehive/view/list/hiveaction $:/plugins/iceity/beehive/mask/task $:/plugins/iceity/beehive/view/tab/action" "$:/plugins/iceity/beehive/view/list/action" "$:/plugins/iceity/beehive/view/list/hivetask ">>
+<<tabs "$:/plugins/iceity/beehive/view/hive/task $:/plugins/iceity/beehive/view/hive/inspection $:/plugins/iceity/beehive/view/hive/harvest $:/plugins/iceity/beehive/view/hive/queen $:/plugins/iceity/beehive/view/hive/treatment" "$:/plugins/iceity/beehive/view/hive/task">>

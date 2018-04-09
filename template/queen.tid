@@ -1,0 +1,12 @@
+title: $:/plugins/iceity/beehive/template/queen
+tags: $:/tags/ViewTemplate
+
+<$list filter="[is[current]tag[queen]]">
+
+! Details
+
+|!Name|{{!!name}}|
+|!Alive|<$checkbox field="active" checked="yes" unchecked="no" />|
+|!Date|{{!!date}}|
+|!Mother|<$link to={{!!mother-id}}><$transclude tiddler={{!!mother-id}} field="name" /></$link>|
+|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|

@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/beehive/view/main/config
+caption: Configuration
+
+<$macrocall
+    $name="tabs"
+    tabsList="$:/plugins/iceity/beehive/mask/config/beekeeper $:/plugins/iceity/beehive/mask/config/forage $:/plugins/iceity/beehive/mask/config/medication $:/plugins/iceity/beehive/mask/config/source $:/plugins/iceity/beehive/mask/config/type"
+    default="$:/plugins/iceity/beehive/mask/config/beekeeper"
+    class="tc-vertical"
+/>

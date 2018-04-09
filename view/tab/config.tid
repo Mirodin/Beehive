@@ -1,4 +1,0 @@
-title: $:/plugins/iceity/beehive/view/tab/config
-caption: Configuration
-
-<<tabs "$:/plugins/iceity/beehive/mask/config/beekeeper $:/plugins/iceity/beehive/mask/config/feed $:/plugins/iceity/beehive/mask/config/source $:/plugins/iceity/beehive/mask/config/treatment $:/plugins/iceity/beehive/mask/config/type " "$:/plugins/iceity/beehive/mask/config/beekeeper">>

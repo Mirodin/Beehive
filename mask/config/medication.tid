@@ -1,0 +1,19 @@
+title: $:/plugins/iceity/beehive/mask/config/medication
+caption: Medications
+
+<$set name="tempTiddler" value="$:/temp/newMedication">
+
+    {{$:/plugins/iceity/beehive/mask/partial/name}}
+
+    Company: <$edit-text tiddler=<<tempTiddler>> field="company" />
+
+    {{$:/plugins/iceity/beehive/mask/partial/note}}
+
+    <$button>Save new Medication
+        <$action-setfield $tiddler=<<tempTiddler>> tags="medication" title=<<uid>> />
+        <$action-deletetiddler $tiddler=<<tempTiddler>> />
+    </$button>
+
+</$set>
+
+<<table [tag[medication]] "title name company text" "UID Name Company Notes">>

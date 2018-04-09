@@ -3,7 +3,7 @@ caption: Types
 
 <$set name="tempTiddler" value="$:/temp/newType">
 
-    Name: <$edit-text tiddler=<<tempTiddler>> field="name" />
+    {{$:/plugins/iceity/beehive/mask/partial/name}}
 
     Height: <$edit-text tiddler=<<tempTiddler>> field="height" placeholder="mm" type="number" />
     Width: <$edit-text tiddler=<<tempTiddler>> field="width" placeholder="mm" type="number" />
@@ -13,9 +13,9 @@ caption: Types
     Frame height: <$edit-text tiddler=<<tempTiddler>> field="frame-height" placeholder="mm" type="number" />
     Frame width: <$edit-text tiddler=<<tempTiddler>> field="frame-width" placeholder="mm" type="number" />
 
-    Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />
+    {{$:/plugins/iceity/beehive/mask/partial/note}}
 
-    <$button>Create new Type
+    <$button>Save new Type
         <$action-setfield $tiddler=<<tempTiddler>> tags="type" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>

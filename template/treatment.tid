@@ -1,0 +1,11 @@
+title: $:/plugins/iceity/beehive/template/treatment
+tags: $:/tags/ViewTemplate
+
+<$list filter="[is[current]tag[treatment]]">
+
+! Details
+
+|!Medication|{{!!medication-id}}|
+|!Amount|{{!!amount}} ml|
+|!Date|{{!!date}}|
+|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|

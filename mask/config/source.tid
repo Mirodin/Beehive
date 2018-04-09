@@ -3,11 +3,11 @@ caption: Sources
 
 <$set name="tempTiddler" value="$:/temp/newSource">
 
-    Name: <$edit-text tiddler=<<tempTiddler>> field="name" />
+    {{$:/plugins/iceity/beehive/mask/partial/name}}
 
-    Notes: <$edit-text tiddler=<<tempTiddler>> class="tc-edit-texteditor" default="" />
+    {{$:/plugins/iceity/beehive/mask/partial/note}}
 
-    <$button>Create new Source
+    <$button>Save new Source
         <$action-setfield $tiddler=<<tempTiddler>> tags="source" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
