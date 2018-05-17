@@ -3,8 +3,6 @@ caption: New task
 
 <$set name="tempTiddler" value="$:/temp/newTask">
 
-    {{$:/plugins/iceity/beehive/mask/partial/name}}
-
     {{$:/plugins/iceity/beehive/mask/partial/action}}
 
     <$button>Save new Task

@@ -1,4 +1,4 @@
 title: $:/plugins/iceity/beehive/view/main/task
 caption: Tasks
 
-<<table [tag[task]done[0]sort[date]] "hive due text" "Hive Due Task">>
+<<table [tag[task]done[0]sort[date]] "hive-id date text" "Hive Due Task">>
