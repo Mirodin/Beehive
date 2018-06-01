@@ -6,11 +6,15 @@ tags: $:/tags/ViewTemplate
 ! Details
 
 |!Name|{{!!name}}|
-|!Active|<$checkbox field="active" checked="yes" unchecked="no" />|
 |!Created|{{!!date}}|
 |!Hive type|<$transclude tiddler={{!!type-id}} field="name" />|
 |!Source|<$transclude tiddler={{!!source-id}} field="name" />|
 |!Parent|<$link to={{!!parent-id}}><$transclude tiddler={{!!parent-id}} field="name" /></$link>|
 |!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+
+! Stats
+|!Active|<$checkbox field="active" checked="yes" unchecked="no" />|
+|!Brood-Frames|<$edit-text field="frame-count" type="number" />|
+|!Honeyroom|<$checkbox field="honeyroom" checked="yes" unchecked="no" />|
 
 <<tabs "$:/plugins/iceity/beehive/view/hive/task $:/plugins/iceity/beehive/view/hive/inspection $:/plugins/iceity/beehive/view/hive/harvest $:/plugins/iceity/beehive/view/hive/queen $:/plugins/iceity/beehive/view/hive/treatment" "$:/plugins/iceity/beehive/view/hive/task">>
