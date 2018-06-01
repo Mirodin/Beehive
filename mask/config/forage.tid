@@ -16,4 +16,19 @@ caption: Forages
 
 </$set>
 
-<<table [tag[forage]] "title name company text" "UID Name Company Notes">>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Notes</th>
+    </thead>
+    <tbody>
+        <$list filter="[tag[forage]sort[name]]">
+            <tr>
+                <td><$link to={{!!title}}>{{!!name}}</$link></td>
+                <td>{{!!company}}</td>
+                <td>{{!!text}}</td>
+            </tr>
+        </$list>
+    </tbody>
+</table>

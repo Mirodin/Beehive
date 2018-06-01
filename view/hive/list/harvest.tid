@@ -1,8 +1,21 @@
 title: $:/plugins/iceity/beehive/view/hive/list/harvest
 caption: Harvests
 
-\define makefilter() [tag[harvest]hive-id[$(title)$]]
-
-<$vars title={{!!title}}>
-    <$macrocall $name="table" filter=<<makefilter>> fields="title date text amount moisture" headings="UID Date Notes Amount Moisture"/>
-</$vars>
+<table>
+    <thead>
+        <th>Date</th>
+        <th>Notes</th>
+        <th>Amount</th>
+        <th>Moisture</th>
+    </thead>
+    <tbody>
+        <$list filter="[tag[harvest]hive-id{!!title}!sort[date]]">
+            <tr>
+                <td><$link to={{!!title}}>{{!!date}}</$link></td>
+                <td>{{!!text}}</td>
+                <td>{{!!amount}}</td>
+                <td>{{!!moisture}}</td>
+            </tr>
+        </$list>
+    </tbody>
+</table>

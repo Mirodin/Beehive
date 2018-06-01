@@ -14,4 +14,17 @@ caption: Beekeepers
 
 </$set>
 
-<<table [tag[beekeeper]] "title name text" "UID Name Notes">>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Notes</th>
+    </thead>
+    <tbody>
+        <$list filter="[tag[beekeeper]sort[name]]">
+            <tr>
+                <td><$link to={{!!title}}>{{!!name}}</$link></td>
+                <td>{{!!text}}</td>
+            </tr>
+        </$list>
+    </tbody>
+</table>

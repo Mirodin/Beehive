@@ -23,3 +23,27 @@ caption: Types
 </$set>
 
 <<table [tag[type]] "title name height width count frame-height frame-width text" "UID Name Height Width Frames Frame-Heigth Frame-Width Notes">>
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Width</th>
+        <th>Frame #</th>
+        <th>Frame Height</th>
+        <th>Frame Width</th>
+        <th>Notes</th>
+    </thead>
+    <tbody>
+        <$list filter="[tag[type]sort[name]]">
+            <tr>
+                <td><$link to={{!!title}}>{{!!name}}</$link></td>
+                <td>{{!!height}}</td>
+                <td>{{!!width}}</td>
+                <td>{{!!count}}</td>
+                <td>{{!!frame-height}}</td>
+                <td>{{!!frame-ẁidth}}</td>
+                <td>{{!!text}}</td>
+            </tr>
+        </$list>
+    </tbody>
+</table>

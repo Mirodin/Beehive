@@ -1,8 +1,19 @@
 title: $:/plugins/iceity/beehive/view/hive/list/queen
 caption: Queens
 
-\define makefilter() [tag[queen]hive-id[$(title)$]!sort[date]!sort[active]]
-
-<$vars title={{!!title}}>
-    <$macrocall $name="table" filter=<<makefilter>> fields="title date text active" headings="UID Date Notes Alive"/>
-</$vars>
+<table>
+    <thead>
+        <th>Date</th>
+        <th>Notes</th>
+        <th>Alive</th>
+    </thead>
+    <tbody>
+        <$list filter="[tag[queen]hive-id{!!title}!sort[date]]">
+            <tr>
+                <td><$link to={{!!title}}>{{!!date}}</$link></td>
+                <td>{{!!text}}</td>
+                <td>{{!!active}}</td>
+            </tr>
+        </$list>
+    </tbody>
+</table>
