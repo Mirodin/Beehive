@@ -4,7 +4,7 @@ caption: New Feed
 <$set name="tempTiddler" value="$:/temp/newFeed">
 
     Feed: <$select tiddler=<<tempTiddler>> field="feed-id">
-        <$list filter="[tag[feed]]">
+        <$list filter="[tag[forage]]">
             <option value={{!!title}}>{{!!name}}</option>
         </$list>
     </$select>
@@ -13,8 +13,8 @@ caption: New Feed
 
     {{$:/plugins/iceity/beehive/mask/partial/action}}
 
-    <$button>Save new Harvest
-        <$action-setfield $tiddler=<<tempTiddler>> hive={{!!title}} tags="feed" title=<<uid>> />
+    <$button>Save new Feeding
+        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="action feed" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
 

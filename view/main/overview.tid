@@ -19,7 +19,7 @@ caption: Overview
     </tbody>
 </table>
 
-! Recent Inspections
+! Recent Activities
 <table>
     <thead>
         <th>Hive</th>
@@ -27,7 +27,7 @@ caption: Overview
         <th>Notes</th>
     </thead>
     <tbody>
-        <$list filter="[tag[inspection]!sort[date]limit[10]]">
+        <$list filter="[tag[action]!sort[date]limit[10]]">
             <tr>
                 <td><$link to={{!!hive-id}}><$transclude tiddler={{!!hive-id}} field="name" /></$link></td>
                 <td>{{!!date}}</td>

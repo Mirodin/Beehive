@@ -14,7 +14,7 @@ caption: New Treatment
     {{$:/plugins/iceity/beehive/mask/partial/action}}
 
     <$button>Save new Treatment
-        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="treatment" title=<<uid>> />
+        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="action treatment" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
 

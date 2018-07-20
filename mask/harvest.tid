@@ -10,7 +10,7 @@ caption: New Harvest
     {{$:/plugins/iceity/beehive/mask/partial/action}}
 
     <$button>Save new Harvest
-        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="harvest" title=<<uid>> />
+        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="action harvest" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
 

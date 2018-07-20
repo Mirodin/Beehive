@@ -6,6 +6,6 @@ tags: $:/tags/ViewTemplate
 ! Details
 
 |!Date|{{!!date}}|
-|!Feed|{{!!feed}}|
-|!Amount|{{!!amount}} l|
+|!Feed|<$transclude tiddler={{!!feed-id}} field="name" />|
+|!Amount|{{!!amount}}|
 |!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|

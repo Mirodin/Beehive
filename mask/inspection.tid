@@ -58,7 +58,7 @@ caption: New Inspection
     </$select>
 
     <$button>Save new Inspection
-        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="inspection" title=<<uid>> />
+        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="action inspection" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
 

@@ -17,4 +17,4 @@ tags: $:/tags/ViewTemplate
 |!Brood-Frames|<$edit-text field="frame-count" type="number" />|
 |!Honeyroom|<$checkbox field="honeyroom" checked="yes" unchecked="no" />|
 
-<<tabs "$:/plugins/iceity/beehive/view/hive/task $:/plugins/iceity/beehive/view/hive/inspection $:/plugins/iceity/beehive/view/hive/harvest $:/plugins/iceity/beehive/view/hive/queen $:/plugins/iceity/beehive/view/hive/treatment" "$:/plugins/iceity/beehive/view/hive/task">>
+<<tabs "$:/plugins/iceity/beehive/view/hive/task $:/plugins/iceity/beehive/view/hive/inspection $:/plugins/iceity/beehive/view/hive/feed $:/plugins/iceity/beehive/view/hive/harvest $:/plugins/iceity/beehive/view/hive/queen $:/plugins/iceity/beehive/view/hive/treatment" "$:/plugins/iceity/beehive/view/hive/task">>
