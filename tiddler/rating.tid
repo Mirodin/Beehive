@@ -1,0 +1,10 @@
+title: $:/plugins/iceity/beehive/tiddler/rating
+caption: Rating
+type: application/x-tiddler-dictionary
+
+0: N/A
+1: Poor
+2: Moderate
+3: OK
+4: Good
+5: Very good

@@ -5,7 +5,7 @@ tags: $:/tags/ViewTemplate
 
 ! Details
 
-|!Medication|{{!!medication-id}}|
-|!Amount|{{!!amount}} ml|
-|!Date|{{!!date}}|
-|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+|!Medication| <$transclude tiddler={{!!medication-id}} field="name" /> |
+|!Amount| {{!!amount}} ml |
+|!Date| {{!!date}} |
+|!Beekeeper| <$transclude tiddler={{!!beekeeper-id}} field="name" /> |

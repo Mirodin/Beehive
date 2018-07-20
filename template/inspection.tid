@@ -5,17 +5,23 @@ tags: $:/tags/ViewTemplate
 
 ! Details
 
-|!Date|{{!!date}}|
-|!Temparature|{{!!temperature}} °C|
-|!Weather|{{!!weather}}|
-|!Beekeeper|<$transclude tiddler={{!!beekeeper-id}} field="name" />|
+|!Date| {{!!date}}  |
+|!Beekeeper| <$transclude tiddler={{!!beekeeper-id}} field="name" /> |
+
+!! Climate
+
+|!Temparature| {{!!temperature}} °C |
+|!Weather| <$transclude tiddler="$:/plugins/iceity/beehive/tiddler/weather" index={{!!weather}} /> |
+
+!! Hive state
+
+|!Population| <$set name="population" value={{!!population}} emptyValue="0"><$transclude tiddler="$:/plugins/iceity/beehive/tiddler/rating" index=<<population>> /></$set> |
+|!Temperament| <$set name="temperament" value={{!!temperament}} emptyValue="0"><$transclude tiddler="$:/plugins/iceity/beehive/tiddler/rating" index=<<temperament>> /></$set> |
 
 !! Observations
 
-|!Brood seen|{{!!brood}}|
-|!Pins seen|{{!!pins}}|
-|!Queen seen|{{!!queen}}|
-|!Mite drop|{{!!mites}}|
-|!Population|{{!!population}}|
-|!Brood pattern|{{!!pattern}}|
-|!Temperament|{{!!temperament}}|
+|!Brood seen| <$transclude field="brood">N/A</$transclude> |
+|!Pins seen| <$transclude field="pins">N/A</$transclude> |
+|!Queen seen| <$transclude field="queen">N/A</$transclude> |
+|!Mite drop| <$transclude field="mites">N/A</$transclude> |
+|!Brood pattern| <$set name="pattern" value={{!!pattern}} emptyValue="0"><$transclude tiddler="$:/plugins/iceity/beehive/tiddler/rating" index=<<pattern>> /></$set> |

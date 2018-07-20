@@ -5,7 +5,7 @@ tags: $:/tags/ViewTemplate
 
 ! Details
 
-|!Due|{{!!date}}|
-|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+|!Due| {{!!date}} |
+|!Beekeeper| <$transclude tiddler={{!!beekeeper-id}} field="name" /> |
 
 Done: <$checkbox field="done" checked="1" unchecked="0" />

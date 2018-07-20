@@ -5,8 +5,8 @@ tags: $:/tags/ViewTemplate
 
 ! Details
 
-|!Name|{{!!name}}|
-|!Alive|<$checkbox field="active" checked="yes" unchecked="no" />|
-|!Date|{{!!date}}|
-|!Mother|<$link to={{!!mother-id}}><$transclude tiddler={{!!mother-id}} field="name" /></$link>|
-|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+|!Name| {{!!name}} |
+|!Alive| <$checkbox field="active" checked="yes" unchecked="no" /> |
+|!Date| {{!!date}} |
+|!Mother| <$link to={{!!mother-id}}><$transclude tiddler={{!!mother-id}} field="name" /></$link> |
+|!Beekeeper| <$transclude tiddler={{!!beekeeper-id}} field="name" /> |

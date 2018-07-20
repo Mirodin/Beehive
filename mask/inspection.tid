@@ -8,17 +8,11 @@ caption: New Inspection
     Temperature: <$edit-text tiddler=<<tempTiddler>> field="temperature" placeholder="°C" type="number" />
 
     Weather conditions: <$select tiddler=<<tempTiddler>> field="weather">
-        <option value="1">Sunny</option>
-        <option value="2">Partial clouds</option>
-        <option value="3">Clouds</option>
-        <option value="4">Heavy clouds</option>
-        <option value="5">Drizzle</option>
-        <option value="6">Partial rain</option>
-        <option value="7">Rain</option>
-        <option value="8">Fog</option>
-        <option value="9">Snow</option>
-        <option value="10">Storm</option>
-        <option value="11">Thunderstorm</option>
+        <$list filter="[[$:/plugins/iceity/beehive/tiddler/weather]indexes[]]" variable=weather>
+            <option value=<<weather>>>
+                <$view tiddler="$:/plugins/iceity/beehive/tiddler/weather" index=<<weather>> />
+            </option>
+        </$list>
     </$select>
 
     {{$:/plugins/iceity/beehive/mask/partial/action}}
@@ -34,27 +28,15 @@ caption: New Inspection
     Mite drop: <$edit-text tiddler=<<tempTiddler>> field="mites" placeholder="mites/day" type="number" />
 
     Brood pattern: <$select tiddler=<<tempTiddler>> field="pattern">
-        <option value="5">5: Very Good</option>
-        <option value="4">4: Good</option>
-        <option value="3">3: OK</option>
-        <option value="2">2: Moderate</option>
-        <option value="1">1: Poor</option>
+        {{$:/plugins/iceity/beehive/mask/partial/rating}}
     </$select>
 
     Population: <$select tiddler=<<tempTiddler>> field="population">
-        <option value="5">5: Very Good</option>
-        <option value="4">4: Good</option>
-        <option value="3">3: OK</option>
-        <option value="2">2: Moderate</option>
-        <option value="1">1: Poor</option>
+        {{$:/plugins/iceity/beehive/mask/partial/rating}}
     </$select>
 
     Temperament: <$select tiddler=<<tempTiddler>> field="temperament">
-        <option value="5">5: Very Good</option>
-        <option value="4">4: Good</option>
-        <option value="3">3: OK</option>
-        <option value="2">2: Moderate</option>
-        <option value="1">1: Poor</option>
+        {{$:/plugins/iceity/beehive/mask/partial/rating}}
     </$select>
 
     <$button>Save new Inspection

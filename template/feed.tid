@@ -5,7 +5,7 @@ tags: $:/tags/ViewTemplate
 
 ! Details
 
-|!Date|{{!!date}}|
-|!Feed|<$transclude tiddler={{!!feed-id}} field="name" />|
-|!Amount|{{!!amount}}|
-|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+|!Date| {{!!date}} |
+|!Feed| <$transclude tiddler={{!!feed-id}} field="name" /> |
+|!Amount| {{!!amount}} |
+|!Beekeeper| <$transclude tiddler={{!!beekeeper-id}} field="name" /> |
