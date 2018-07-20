@@ -24,14 +24,30 @@ caption: Overview
     <thead>
         <th>Hive</th>
         <th>Date</th>
+        <th>Action</th>
         <th>Notes</th>
     </thead>
     <tbody>
-        <$list filter="[tag[action]!sort[date]limit[10]]">
+        <$list filter="[tag[action]!sort[date]limit[20]]">
             <tr>
                 <td><$link to={{!!hive-id}}><$transclude tiddler={{!!hive-id}} field="name" /></$link></td>
                 <td>{{!!date}}</td>
-                <td>{{!!text}}</td>
+                <$list filter="[is[current]tag[feed]]">
+                    <td>Feed</td>
+                    <td><$transclude field="amount" /> kg <$transclude tiddler={{!!feed-id}} field="name" /></td>
+                </$list>
+                <$list filter="[is[current]tag[harvest]]">
+                    <td>Harvest</td>
+                    <td><$transclude field="amount" /> kg</td>
+                </$list>
+                <$list filter="[is[current]tag[inspection]]">
+                    <td>Inspection</td>
+                    <td>{{!!text}}</td>
+                </$list>
+                <$list filter="[is[current]tag[treatment]]">
+                    <td>Treatment</td>
+                    <td><$transclude field="amount" /> ml <$transclude tiddler={{!!medication-id}} field="name" /></td>
+                </$list>
             </tr>
         </$list>
     </tbody>

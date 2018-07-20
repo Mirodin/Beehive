@@ -9,11 +9,11 @@ caption: New Feed
         </$list>
     </$select>
 
-    Amount: <$edit-text tiddler=<<tempTiddler>> field="amount" placeholder="l" type="number" />
+    Amount: <$edit-text tiddler=<<tempTiddler>> field="amount" placeholder="kg" type="number" />
 
     {{$:/plugins/iceity/beehive/mask/partial/action}}
 
-    <$button>Save new Feeding
+    <$button>Save new Feed
         <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="action feed" title=<<uid>> />
         <$action-deletetiddler $tiddler=<<tempTiddler>> />
     </$button>
