@@ -8,7 +8,7 @@ tags: $:/tags/ViewTemplate
 |!Date|{{!!date}}|
 |!Temparature|{{!!temperature}} °C|
 |!Weather|{{!!weather}}|
-|!Beekeeper|<$link to={{!!beekeeper-id}}><$transclude tiddler={{!!beekeeper-id}} field="name" /></$link>|
+|!Beekeeper|<$transclude tiddler={{!!beekeeper-id}} field="name" />|
 
 !! Observations
 
