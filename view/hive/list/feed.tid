@@ -1,0 +1,21 @@
+title: $:/plugins/iceity/beehive/view/hive/list/feed
+caption: Feeds
+
+<table>
+    <thead>
+        <th>Date</th>
+        <th>Feed</th>
+        <th>Amount</th>
+        <th>Notes</th>
+    </thead>
+    <tbody>
+        <$list filter="[tag[feed]hive-id{!!title}!sort[date]]">
+            <tr>
+                <td><$link to={{!!title}}>{{!!date}}</$link></td>
+                <td><$transclude tiddler={{!!feed-id}} field="name" /></td>
+                <td>{{!!amount}}</td>
+                <td>{{!!text}}</td>
+            </tr>
+        </$list>
+    </tbody>
+</table>
