@@ -1,6 +1,6 @@
 /*\
 
-title: $:/plugins/iceity/beehive/macro/uid.js
+title: $:/plugins/iceity/inventory/macro/uid.js
 module-type: macro
 type: application/javascript
 

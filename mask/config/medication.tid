@@ -18,9 +18,11 @@ caption: Medications
 
 <table>
     <thead>
-        <th>Name</th>
-        <th>Company</th>
-        <th>Notes</th>
+        <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[medication]sort[name]]">

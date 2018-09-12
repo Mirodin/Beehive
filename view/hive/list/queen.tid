@@ -3,9 +3,11 @@ caption: Queens
 
 <table>
     <thead>
-        <th>Date</th>
-        <th>Notes</th>
-        <th>Alive</th>
+        <tr>
+            <th>Date</th>
+            <th>Notes</th>
+            <th>Alive</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[queen]hive-id{!!title}!sort[date]]">

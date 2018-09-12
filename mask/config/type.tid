@@ -24,13 +24,15 @@ caption: Types
 
 <table>
     <thead>
-        <th>Name</th>
-        <th>Height</th>
-        <th>Width</th>
-        <th>Frame Count</th>
-        <th>Frame Height</th>
-        <th>Frame Width</th>
-        <th>Notes</th>
+        <tr>
+            <th>Name</th>
+            <th>Height</th>
+            <th>Width</th>
+            <th>Frame Count</th>
+            <th>Frame Height</th>
+            <th>Frame Width</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[type]sort[name]]">

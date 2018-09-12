@@ -3,10 +3,12 @@ caption: Feeds
 
 <table>
     <thead>
-        <th>Date</th>
-        <th>Feed</th>
-        <th>Amount</th>
-        <th>Notes</th>
+        <tr>
+            <th>Date</th>
+            <th>Feed</th>
+            <th>Amount</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[feed]hive-id{!!title}!sort[date]]">

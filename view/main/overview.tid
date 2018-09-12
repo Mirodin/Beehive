@@ -4,9 +4,11 @@ caption: Overview
 ! Tasks
 <table>
     <thead>
-        <th>Hive</th>
-        <th>Due</th>
-        <th>Task</th>
+        <tr>
+            <th>Hive</th>
+            <th>Due</th>
+            <th>Task</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[task]done[0]!sort[date]]">
@@ -22,10 +24,12 @@ caption: Overview
 ! Recent Activities
 <table>
     <thead>
-        <th>Hive</th>
-        <th>Date</th>
-        <th>Action</th>
-        <th>Notes</th>
+        <tr>
+            <th>Hive</th>
+            <th>Date</th>
+            <th>Action</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[action]!sort[date]limit[20]]">

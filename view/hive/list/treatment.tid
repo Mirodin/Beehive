@@ -3,10 +3,12 @@ caption: Treatments
 
 <table>
     <thead>
-        <th>Date</th>
-        <th>Medication</th>
-        <th>Amount</th>
-        <th>Notes</th>
+        <tr>
+            <th>Date</th>
+            <th>Medication</th>
+            <th>Amount</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[treatment]hive-id{!!title}!sort[date]]">

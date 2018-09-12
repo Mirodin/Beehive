@@ -3,8 +3,10 @@ caption: Tasks
 
 <table>
     <thead>
-        <th>Due</th>
-        <th>Notes</th>
+        <tr>
+            <th>Due</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[task]hive-id{!!title}done[0]!sort[date]]">

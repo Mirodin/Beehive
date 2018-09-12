@@ -16,8 +16,10 @@ caption: Sources
 
 <table>
     <thead>
-        <th>Name</th>
-        <th>Notes</th>
+        <tr>
+            <th>Name</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[source]sort[name]]">

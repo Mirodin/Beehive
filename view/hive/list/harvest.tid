@@ -3,10 +3,12 @@ caption: Harvests
 
 <table>
     <thead>
-        <th>Date</th>
-        <th>Notes</th>
-        <th>Amount</th>
-        <th>Moisture</th>
+        <tr>
+            <th>Date</th>
+            <th>Notes</th>
+            <th>Amount</th>
+            <th>Moisture</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[harvest]hive-id{!!title}!sort[date]]">

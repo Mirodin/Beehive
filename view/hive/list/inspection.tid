@@ -3,8 +3,10 @@ caption: Inspections
 
 <table>
     <thead>
-        <th>Date</th>
-        <th>Notes</th>
+        <tr>
+            <th>Date</th>
+            <th>Notes</th>
+        </tr>
     </thead>
     <tbody>
         <$list filter="[tag[inspection]hive-id{!!title}!sort[date]]">
