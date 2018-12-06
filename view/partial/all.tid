@@ -1,8 +1,4 @@
-title: $:/plugins/iceity/hive/view/partial/view
-
-<$reveal state=<<toggle>> text="add" type="match">
-    <$transclude tiddler=<<mask>> mode="block" />
-</$reveal>
+title: $:/plugins/iceity/hive/view/partial/all
 
 <$reveal default="all" state=<<toggle>> text="all" type="match">
     <$button set=<<toggle>> setTo="add">Add <<buttonText>></$button>
@@ -18,7 +14,7 @@ title: $:/plugins/iceity/hive/view/partial/view
                 <tr>
                     <td>
                         <$button class="tc-btn-invisible tc-tiddlylink" set=<<toggle>> setTo="show">
-                            <$action-setfield $tiddler=<<toggle>> current=<<currentTiddler>> />
+                            <$action-setfield $tiddler=<<toggle>> target=<<currentTiddler>> />
                             <$transclude field="date" />
                         </$button>
                     </td>

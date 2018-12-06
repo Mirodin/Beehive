@@ -1,13 +1,18 @@
 title: $:/plugins/iceity/hive/mask/partial/button
 
-<$button set=<<toggle>> setTo="show">Save
-    <$vars newTitle=<<uid>>>
-        <$action-setfield $tiddler=<<target>> record=<<record>> title=<<newTitle>> />
-        <$action-setfield $tiddler=<<toggle>> current=<<newTitle>> />
-        <$action-listops $field=<<record>> $subfilter=<<newTitle>> />
-        <$action-listops $field=<<record>> $subfilter="+[!sort[date]]" />
-        <$action-deletetiddler $tiddler=<<target>> />
-    </$vars>
-</$button>
-<$button set=<<toggle>> setTo="all">Cancel</$button>
+<$reveal state=<<toggle>> text="add" type="match">
+    <$button set=<<toggle>> setTo="show">Save
+        <$vars newTitle=<<uid>>>
+            <$action-setfield $tiddler=<<target>> record=<<record>> title=<<newTitle>> />
+            <$action-setfield $tiddler=<<toggle>> target=<<newTitle>> />
+            <$action-listops $field=<<record>> $subfilter=<<newTitle>> />
+            <$action-listops $field=<<record>> $subfilter="+[!sort[date]]" />
+            <$action-deletetiddler $tiddler=<<target>> />
+        </$vars>
+    </$button>
+    <$button set=<<toggle>> setTo="all">Cancel</$button>
+</$reveal>
 
+<$reveal state=<<toggle>> text="edit" type="match">
+    <$button set=<<toggle>> setTo="all">OK</$button>
+</$reveal>

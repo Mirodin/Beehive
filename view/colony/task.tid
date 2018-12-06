@@ -1,8 +1,61 @@
 title: $:/plugins/iceity/hive/view/colony/task
 caption: Tasks
 
-<$wikify name="toggle" text="$:/temp/hive/view/{{!!title}}/task">
-    <$vars buttonText="Task" filter="[list[!!task]]" mask="$:/plugins/iceity/hive/mask/task">
-        <$transclude tiddler="$:/plugins/iceity/hive/view/partial/view" />
+<$wikify name="toggle" text="$:/temp/hive/view/<<currentTiddler>>/task">
+
+    <!-- Show all tasks -->
+    <$vars buttonText="Task" filter="[list[!!task]]">
+
+        <$transclude tiddler="$:/plugins/iceity/hive/view/partial/all" />
+
     </$vars>
+
+    <!-- Add new task -->
+    <$reveal state=<<toggle>> text="add" type="match">
+        <$wikify name="target" text="$:/temp/hive/<<currentTiddler>>/draft/feeding">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/task" />
+
+        </$wikify>
+    </$reveal>
+
+    <$set name="target" tiddler=<<toggle>> field="target">
+
+        <!-- Edit active task -->
+        <$reveal state=<<toggle>> text="edit" type="match">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/task" />
+
+        </$reveal>
+
+        <!-- Show active task details -->
+        <$reveal state=<<toggle>> text="show" type="match">
+
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Beekeeper</th>
+                        <td>
+                            <$list filter="[list[!!beekeeper]]">
+                                <$transclude field="name" />
+                            </$list>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Due</th>
+                        <td><$transclude tiddler=<<target>> field="date" /></td>
+                    </tr>
+                    <tr>
+                        <th>Done</th>
+                        <td><$transclude tiddler=<<target>> field="done" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
+
+        </$reveal>
+
+    </$set>
+
 </$wikify>

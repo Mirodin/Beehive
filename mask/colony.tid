@@ -19,7 +19,7 @@ title: $:/plugins/iceity/hive/mask/colony
     <$button set=<<toggle>> setTo="show">Save
         <$vars newTitle=<<uid>>>
             <$action-setfield $tiddler=<<target>> active="1" record="colony" title=<<newTitle>> />
-            <$action-setfield $tiddler=<<toggle>> current=<<newTitle>> />
+            <$action-setfield $tiddler=<<toggle>> target=<<newTitle>> />
             <$action-deletetiddler $tiddler=<<target>> />
             <$action-navigate $to=<<newTitle>> />
         </$vars>
