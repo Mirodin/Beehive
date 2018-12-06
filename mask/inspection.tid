@@ -1,47 +1,44 @@
-title: $:/plugins/iceity/beehive/mask/inspection
-caption: New Inspection
+title: $:/plugins/iceity/hive/mask/inspection
 
-<$set name="tempTiddler" value="$:/temp/newInspection">
+<$wikify name="target" text="$:/temp/hive/<<currentTiddler>>/draft/inspection">
 
     ! General
 
-    Temperature: <$edit-text tiddler=<<tempTiddler>> field="temperature" placeholder="°C" type="number" />
-
-    Weather conditions: <$select tiddler=<<tempTiddler>> field="weather">
-        <$list filter="[[$:/plugins/iceity/beehive/tiddler/weather]indexes[]]" variable=weather>
+    Temperature: <$edit-text tiddler=<<target>> field="temperature" placeholder="°C" type="number" />
+    Weather conditions: <$select tiddler=<<target>> field="weather">
+        <$list filter="[[$:/plugins/iceity/hive/tiddler/weather]indexes[]]" variable=weather>
             <option value=<<weather>>>
-                <$view tiddler="$:/plugins/iceity/beehive/tiddler/weather" index=<<weather>> />
+                <$view tiddler="$:/plugins/iceity/hive/tiddler/weather" index=<<weather>> />
             </option>
         </$list>
     </$select>
 
-    {{$:/plugins/iceity/beehive/mask/partial/action}}
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
 
     ! Observations
 
-    <$checkbox tiddler=<<tempTiddler>> field="brood" checked="yes" unchecked="no">Brood seen</$checkbox>
+    <$checkbox tiddler=<<target>> field="brood" checked="1" unchecked="0">Brood seen</$checkbox>
 
-    <$checkbox tiddler=<<tempTiddler>> field="pins" checked="yes" unchecked="no">Pins seen</$checkbox>
+    <$checkbox tiddler=<<target>> field="pins" checked="1" unchecked="0">Pins seen</$checkbox>
 
-    <$checkbox tiddler=<<tempTiddler>> field="queen" checked="yes" unchecked="no">Queen seen</$checkbox>
+    <$checkbox tiddler=<<target>> field="queen" checked="1" unchecked="0">Queen seen</$checkbox>
 
-    Mite drop: <$edit-text tiddler=<<tempTiddler>> field="mites" placeholder="mites/day" type="number" />
+    Mite Drop: <$edit-text tiddler=<<target>> field="mites" type="number" />
 
-    Brood pattern: <$select tiddler=<<tempTiddler>> field="pattern">
-        {{$:/plugins/iceity/beehive/mask/partial/rating}}
-    </$select>
+    Brood pattern: <$vars field="pattern">
+        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/rate" />
+    </$vars>
 
-    Population: <$select tiddler=<<tempTiddler>> field="population">
-        {{$:/plugins/iceity/beehive/mask/partial/rating}}
-    </$select>
+    Population: <$vars field="population">
+        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/rate" />
+    </$vars>
 
-    Temperament: <$select tiddler=<<tempTiddler>> field="temperament">
-        {{$:/plugins/iceity/beehive/mask/partial/rating}}
-    </$select>
+    Temperament: <$vars field="temperament">
+        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/rate" />
+    </$vars>
 
-    <$button>Save new Inspection
-        <$action-setfield $tiddler=<<tempTiddler>> hive-id={{!!title}} tags="action inspection" title=<<uid>> />
-        <$action-deletetiddler $tiddler=<<tempTiddler>> />
-    </$button>
+    <$vars record="inspection">
+        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/button" />
+    </$vars>
 
-</$set>
+</$wikify>

@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/hive/mask/partial/rate
+
+<$select tiddler=<<target>> field=<<field>>>
+    <$list filter="[[$:/plugins/iceity/hive/tiddler/rate]indexes[]]" variable=rate>
+        <option value=<<rate>>>
+            <$view tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<rate>> />
+        </option>
+    </$list>
+</$select>

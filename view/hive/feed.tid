@@ -1,9 +1,0 @@
-title: $:/plugins/iceity/beehive/view/hive/feed
-caption: Feeds
-
-<$macrocall
-    $name="tabs"
-    tabsList="$:/plugins/iceity/beehive/view/hive/list/feed $:/plugins/iceity/beehive/mask/feed"
-    default="$:/plugins/iceity/beehive/view/hive/list/feed"
-    class="tc-vertical"
-/>

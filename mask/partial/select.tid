@@ -1,0 +1,7 @@
+title: $:/plugins/iceity/hive/mask/partial/select
+
+<$select tiddler=<<target>> field=<<field>>>
+    <$list filter=<<filter>>>
+        <option value={{!!title}}>{{!!name}}</option>
+    </$list>
+</$select

@@ -1,0 +1,4 @@
+title: $:/plugins/iceity/hive/view/partial/button
+
+<$button set=<<toggle>> setTo="all">OK</$button>
+<$button set=<<toggle>> setTo="edit">Edit</$button>

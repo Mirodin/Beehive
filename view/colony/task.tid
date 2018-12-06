@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/hive/view/colony/task
+caption: Tasks
+
+<$wikify name="toggle" text="$:/temp/hive/view/{{!!title}}/task">
+    <$vars buttonText="Task" filter="[list[!!task]]" mask="$:/plugins/iceity/hive/mask/task">
+        <$transclude tiddler="$:/plugins/iceity/hive/view/partial/view" />
+    </$vars>
+</$wikify>

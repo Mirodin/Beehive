@@ -1,7 +1,0 @@
-title: $:/plugins/iceity/beehive/mask/partial/rating
-
-<$list filter="[[$:/plugins/iceity/beehive/tiddler/rating]indexes[]]" variable=rate>
-    <option value=<<rate>>>
-        <$view tiddler="$:/plugins/iceity/beehive/tiddler/rating" index=<<rate>> />
-    </option>
-</$list>

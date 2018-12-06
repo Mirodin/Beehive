@@ -1,7 +1,6 @@
-title: $:/plugins/iceity/beehive/mask/partial/action
+title: $:/plugins/iceity/hive/mask/partial/action
 
-{{$:/plugins/iceity/beehive/mask/partial/date}}
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/date" />
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/beekeeper" />
 
-{{$:/plugins/iceity/beehive/mask/partial/beekeeper}}
-
-{{$:/plugins/iceity/beehive/mask/partial/note}}
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/note" />

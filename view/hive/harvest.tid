@@ -1,9 +1,0 @@
-title: $:/plugins/iceity/beehive/view/hive/harvest
-caption: Harvests
-
-<$macrocall
-    $name="tabs"
-    tabsList="$:/plugins/iceity/beehive/view/hive/list/harvest $:/plugins/iceity/beehive/mask/harvest"
-    default="$:/plugins/iceity/beehive/view/hive/list/harvest"
-    class="tc-vertical"
-/>

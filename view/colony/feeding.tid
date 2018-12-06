@@ -1,0 +1,38 @@
+title: $:/plugins/iceity/hive/view/colony/feeding
+caption: Feedings
+
+<$wikify name="toggle" text="$:/temp/hive/view/{{!!title}}/feeding">
+    <$vars buttonText="Feeding" filter="[list[!!feeding]]" mask="$:/plugins/iceity/hive/mask/feeding">
+        <$transclude tiddler="$:/plugins/iceity/hive/view/partial/view" />
+    </$vars>
+
+    <$reveal state=<<toggle>> text="show" type="match">
+        <$set name="current" tiddler=<<toggle>> field="current">
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Beekeeper</th>
+                        <td>
+                            <$list filter="[list[!!beekeeper]sort[name]]">
+                                <$transclude field="name" />
+                            </$list>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td><$transclude tiddler=<<current>> field="date" /></td>
+                    </tr>
+                    <tr>
+                        <th>Amount</th>
+                        <td><$transclude tiddler=<<current>> field="amount" /></td>
+                    </tr>
+                    <tr>
+                        <th>Feed</th>
+                        <td><$transclude tiddler=<<current>> field="feed" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
+        </$set>
+    </$reveal>
+</$wikify>

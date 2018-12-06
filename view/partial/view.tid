@@ -1,0 +1,30 @@
+title: $:/plugins/iceity/hive/view/partial/view
+
+<$reveal state=<<toggle>> text="add" type="match">
+    <$transclude tiddler=<<mask>> mode="block" />
+</$reveal>
+
+<$reveal default="all" state=<<toggle>> text="all" type="match">
+    <$button set=<<toggle>> setTo="add">Add <<buttonText>></$button>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            <$list filter=<<filter>>>
+                <tr>
+                    <td>
+                        <$button class="tc-btn-invisible tc-tiddlylink" set=<<toggle>> setTo="show">
+                            <$action-setfield $tiddler=<<toggle>> current=<<currentTiddler>> />
+                            <$transclude field="date" />
+                        </$button>
+                    </td>
+                    <td><$transclude field="text" /></td>
+                </tr>
+            </$list>
+        </tbody>
+    </table>
+</$reveal>

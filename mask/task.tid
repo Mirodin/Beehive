@@ -1,13 +1,11 @@
-title: $:/plugins/iceity/beehive/mask/task
-caption: New task
+title: $:/plugins/iceity/hive/mask/task
 
-<$set name="tempTiddler" value="$:/temp/newTask">
+<$wikify name="target" text="$:/temp/hive/<<currentTiddler>>/draft/task">
 
-    {{$:/plugins/iceity/beehive/mask/partial/action}}
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
 
-    <$button>Save new Task
-        <$action-setfield $tiddler=<<tempTiddler>> done="0" hive-id={{!!title}} tags="task" title=<<uid>> />
-        <$action-deletetiddler $tiddler=<<tempTiddler>> />
-    </$button>
+    <$vars record="task">
+        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/button" />
+    </$vars>
 
-</$set>
+</$wikify>

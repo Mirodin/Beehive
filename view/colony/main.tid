@@ -1,0 +1,30 @@
+title: $:/plugins/iceity/hive/view/colony/main
+caption: Colonies
+
+<$vars toggle="$:/temp/hive/view/colony">
+    <$reveal state=<<toggle>> text="edit" type="match">
+        <$transclude tiddler="$:/plugins/iceity/hive/mask/colony" mode="block" />
+    </$reveal>
+
+    <$reveal default="all" state=<<toggle>> text="all" type="match">
+        <$button set=<<toggle>> setTo="edit">Add colony</$button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Note</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+            <tbody>
+                <$list filter="[record[colony]active[1]sort[name]]">
+                    <tr>
+                        <td><$link to={{!!title}}>{{!!name}}</$link></td>
+                        <td><$macrocall $name=trim text={{!!text}} length=50 /></td>
+                        <td>{{!!date}}</td>
+                    </tr>
+                </$list>
+            </tbody>
+        </table>
+    </$reveal>
+</$vars>

@@ -1,9 +1,0 @@
-title: $:/plugins/iceity/beehive/view/hive/inspection
-caption: Inspections
-
-<$macrocall
-    $name="tabs"
-    tabsList="$:/plugins/iceity/beehive/view/hive/list/inspection $:/plugins/iceity/beehive/mask/inspection"
-    default="$:/plugins/iceity/beehive/view/hive/list/inspection"
-    class="tc-vertical"
-/>
