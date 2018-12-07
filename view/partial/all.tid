@@ -18,7 +18,11 @@ title: $:/plugins/iceity/hive/view/partial/all
                             <$transclude field="date" />
                         </$button>
                     </td>
-                    <td><$transclude field="text" /></td>
+                    <td>
+                        <$set name="text" tiddler=<<currentTiddler>> field="text">
+                            <$macrocall $name="trim" text=<<text>> length=50 />
+                        </$set>
+                    </td>
                 </tr>
             </$list>
         </tbody>

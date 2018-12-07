@@ -20,7 +20,7 @@ caption: Colonies
                 <$list filter="[record[colony]active[1]sort[name]]">
                     <tr>
                         <td><$link to={{!!title}}>{{!!name}}</$link></td>
-                        <td><$macrocall $name=trim text={{!!text}} length=50 /></td>
+                        <td><$macrocall $name="trim" text={{!!text}} length=50 /></td>
                         <td>{{!!date}}</td>
                     </tr>
                 </$list>

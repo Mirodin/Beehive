@@ -34,10 +34,66 @@ caption: Inspections
             <table>
                 <tbody>
                     <tr>
+                        <th>Beekeeper</th>
+                        <td>
+                            <$list filter="[list[!!beekeeper]]">
+                                <$transclude field="name" />
+                            </$list>
+                        </td>
+                        <th>Date</th>
+                        <td><$transclude tiddler=<<target>> field="date" /></td>
+                    </tr>
+                    <tr>
+                        <th>Weather</th>
+                        <td>
+                            <$set name="index" tiddler=<<target>> field="weather">
+                                <$transclude tiddler="$:/plugins/iceity/hive/tiddler/weather" index=<<index>> />
+                            </$set>
+                        </td>
+                        <th>Temperature</th>
+                        <td><$transclude tiddler=<<target>> field="temperature" /> °C</td>
+                    </tr>
+                    <tr>
+                        <th>Population</th>
+                        <td>
+                            <$set name="index" tiddler=<<target>> field="population">
+                                <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>> />
+                            </$set>
+                        </td>
+                        <th>Temperament</th>
+                        <td>
+                            <$set name="index" tiddler=<<target>> field="temperament">
+                                <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>> />
+                            </$set>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Larvae seen</th>
+                        <td><$transclude tiddler=<<target>> field="larvae">No</$transclude></td>
+                        <th>Pins seen</th>
+                        <td><$transclude tiddler=<<target>> field="pins">No</$transclude></td>
+                    </tr>
+                    <tr>
+                        <th>Brood pattern</th>
+                        <td>
+                            <$set name="index" tiddler=<<target>> field="pattern">
+                                <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>> />
+                            </$set>
+                        </td>
+                        <th>Weight</th>
+                        <td><$transclude tiddler=<<target>> field="weather">-</$transclude> kg</td>
+                    </tr>
+                    <tr>
+                        <th>Queen seen</th>
+                        <td><$transclude tiddler=<<target>> field="queen">No</$transclude></td>
+                        <th>Mites</th>
+                        <td><$transclude tiddler=<<target>> field="mites">-</$transclude></td>
                     </tr>
                 </tbody>
             </table>
 
+            <$transclude tiddler=<<target>> />
+             
             <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
 
         </$reveal>

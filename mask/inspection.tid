@@ -15,11 +15,9 @@ Weather conditions: <$select tiddler=<<target>> field="weather">
 
 ! Observations
 
-<$checkbox tiddler=<<target>> field="brood" checked="1" unchecked="0">Brood seen</$checkbox>
+<$checkbox tiddler=<<target>> field="pins" checked="yes" unchecked="">Pins seen</$checkbox>
 
-<$checkbox tiddler=<<target>> field="pins" checked="1" unchecked="0">Pins seen</$checkbox>
-
-<$checkbox tiddler=<<target>> field="queen" checked="1" unchecked="0">Queen seen</$checkbox>
+<$checkbox tiddler=<<target>> field="queen" checked="yes" unchecked="">Queen seen</$checkbox>
 
 Mite Drop: <$edit-text tiddler=<<target>> field="mites" type="number" />
 

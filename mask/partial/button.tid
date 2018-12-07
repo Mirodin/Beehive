@@ -14,5 +14,5 @@ title: $:/plugins/iceity/hive/mask/partial/button
 </$reveal>
 
 <$reveal state=<<toggle>> text="edit" type="match">
-    <$button set=<<toggle>> setTo="all">OK</$button>
+    <$button set=<<toggle>> setTo="show">OK</$button>
 </$reveal>
