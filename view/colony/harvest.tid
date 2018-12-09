@@ -4,7 +4,7 @@ caption: Harvests
 <$wikify name="toggle" text="$:/temp/hive/view/<<currentTiddler>>/harvest">
 
     <!-- Show all harvests -->
-    <$vars buttonText="Task" filter="[list[!!harvest]]">
+    <$vars buttonText="Harvest" filter="[list[!!harvest]]">
 
         <$transclude tiddler="$:/plugins/iceity/hive/view/partial/all" />
 
@@ -21,7 +21,7 @@ caption: Harvests
 
     <$set name="target" tiddler=<<toggle>> field="target">
 
-        <!-- Edit active task -->
+        <!-- Edit active harvest -->
         <$reveal state=<<toggle>> text="edit" type="match">
 
             <$transclude tiddler="$:/plugins/iceity/hive/mask/harvest" />
