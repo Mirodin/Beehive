@@ -1,20 +1,20 @@
-title: $:/plugins/iceity/hive/view/colony/task
-caption: Tasks
+title: $:/plugins/iceity/hive/view/colony/harvest
+caption: Harvests
 
-<$wikify name="toggle" text="$:/temp/hive/view/<<currentTiddler>>/task">
+<$wikify name="toggle" text="$:/temp/hive/view/<<currentTiddler>>/harvest">
 
-    <!-- Show all tasks -->
-    <$vars buttonText="Task" filter="[list[!!task]]">
+    <!-- Show all harvests -->
+    <$vars buttonText="Task" filter="[list[!!harvest]]">
 
         <$transclude tiddler="$:/plugins/iceity/hive/view/partial/all" />
 
     </$vars>
 
-    <!-- Add new task -->
+    <!-- Add new harvest -->
     <$reveal state=<<toggle>> text="add" type="match">
-        <$wikify name="target" text="$:/temp/hive/<<currentTiddler>>/draft/task">
+        <$wikify name="target" text="$:/temp/hive/<<currentTiddler>>/draft/harvest">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/task" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/harvest" />
 
         </$wikify>
     </$reveal>
@@ -24,11 +24,11 @@ caption: Tasks
         <!-- Edit active task -->
         <$reveal state=<<toggle>> text="edit" type="match">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/task" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/harvest" />
 
         </$reveal>
 
-        <!-- Show active task details -->
+        <!-- Show active harvest details -->
         <$reveal state=<<toggle>> text="show" type="match">
 
             <table>
@@ -42,12 +42,12 @@ caption: Tasks
                         </td>
                     </tr>
                     <tr>
-                        <th>Due</th>
+                        <th>Date</th>
                         <td><$transclude tiddler=<<target>> field="date" /></td>
                     </tr>
                     <tr>
-                        <th>Done</th>
-                        <td><$transclude tiddler=<<target>> field="done" /></td>
+                        <th>Amount</th>
+                        <td><$transclude tiddler=<<target>> field="amount" /></td>
                     </tr>
                 </tbody>
             </table>
