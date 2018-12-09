@@ -1,3 +1,24 @@
-title: Hive
+title: $:/plugins/iceity/hive/view/dashboard
+caption: Dashboard
 
-<<tabs "$:/plugins/iceity/hive/view/colony/main" "$:/plugins/iceity/hive/view/colony/main">>
+! Tasks
+<table>
+    <thead>
+        <tr>
+            <th>Due</th>
+            <th>Colony</th>
+            <th>Note</th>
+        </tr>
+    </thead>
+    <tbody>
+        <$list filter="[record[task]done[]]">
+            <tr>
+                <td><$transclude field="date" /></td>
+                <$list filter="[record[colony]search:task<currentTiddler>]">
+                    <td><$link to=<<currentTiddler>>><$transclude field="caption" /></$link></td>
+                </$list>
+                <td><$transclude field="text" /></td>
+            </tr>
+        </$list>
+    </tbody>
+</table>
