@@ -11,7 +11,10 @@ caption: Informations
                 <th>Name</th>
                 <td><$transclude field="name" /></td>
                 <th>Active</th>
-                <td><$transclude field="active" /></td>
+                <td>
+                    <$reveal state=!!active text="1" type="match">yes</$reveal>
+                    <$reveal state=!!active text="1" type="nomatch">no</$reveal>
+                </td>
             </tr>
             <tr>
                 <th>Parent</th>
@@ -40,50 +43,33 @@ caption: Informations
         </tbody>
     </table>
 
-    <$set name="record" tiddler=<<toggle>> field="field">
-
-        <!-- Add new state -->
-        <$reveal state=<<toggle>> text="add" type="match">
-            <$wikify name="target" text="$:/temp/hive/<<currentTiddler>>/draft/<<record>>">
-
-                <$transclude tiddler="$:/plugins/iceity/hive/mask/state" />
-
-            </$wikify>
-        </$reveal>
-
-        <!-- Show all current states -->
-        <$reveal default="all" state=<<toggle>> text="add" type="nomatch">
-
-            <table>
-                <tbody>
-                    <tr><th colspan="2">Current state</th></tr>
-                    <tr>
-                        <th>Frame count</th>
-                        <td>
-                            <$list filter="[list[!!framecount]!limit[1]]">
-                                <$transclude field="value" />
-                            </$list>
-                            <$button set=<<toggle>> setTo="add">Edit
-                                <$action-setfield $tiddler=<<toggle>> field="framecount" />
-                            </$button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Honeyroom</th>
-                        <td>
-                            <$list filter="[list[!!honeyroom]!limit[1]]">
-                                <$transclude field="value" />
-                            </$list>
-                            <$button set=<<toggle>> setTo="add">Edit
-                                <$action-setfield $tiddler=<<toggle>> field="honeyroom" />
-                            </$button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </$reveal>
-
-    </$set>
+    <!-- Show current states -->
+    <table>
+        <tbody>
+            <tr><th colspan="4">Current state</th></tr>
+            <tr>
+                <th>Frame count</th>
+                <$list filter="[list[!!inspection]!frames[]first[1]]">
+                    <td>
+                        <$transclude field="frames" />
+                    </td>
+                    <td>
+                        <$transclude field="date" />
+                    </td>
+                </$list>
+            </tr>
+            <tr>
+                <th>Honeyroom</th>
+                <$list filter="[list[!!inspection]!honeyroom[]first[1]]">
+                    <td>
+                        <$transclude field="honeyroom" />
+                    </td>
+                    <td>
+                        <$transclude field="date" />
+                    </td>
+                </$list>
+            </tr>
+        </tbody>
+    </table>
 
 </$wikify>

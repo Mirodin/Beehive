@@ -3,5 +3,5 @@ title: Hive
 <$macrocall
     $name="tabs"
     default="$:/plugins/iceity/hive/view/dashboard"
-    tabsList="$:/plugins/iceity/hive/view/dashboard $:/plugins/iceity/hive/view/colony/main"
+    tabsList="$:/plugins/iceity/hive/view/dashboard $:/plugins/iceity/hive/view/colony/main $:/plugins/iceity/hive/view/config/main"
 />

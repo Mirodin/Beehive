@@ -1,7 +1,0 @@
-title: $:/plugins/iceity/hive/mask/state
-
-<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
-
-Value: <$edit-text tiddler=<<target>> field="value" />
-
-<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/button" />

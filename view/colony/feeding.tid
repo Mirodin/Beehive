@@ -59,7 +59,7 @@ caption: Feedings
                     </tr>
                 </tbody>
             </table>
-            
+
             <$transclude tiddler=<<target>> />
 
             <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />

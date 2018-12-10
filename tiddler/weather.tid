@@ -2,14 +2,15 @@ title: $:/plugins/iceity/hive/tiddler/weather
 caption: Weather
 type: application/x-tiddler-dictionary
 
-01: Clear
-02: Partly Cloudy
-03: Mostly Cloudy
-04: Overcast
-05: Light Rain
-06: Rain
-07: Light Snow
-08: Snow
-09: Fog
+0: -
+1: Clear
+2: Partly Cloudy
+3: Mostly Cloudy
+4: Overcast
+5: Light Rain
+6: Rain
+7: Light Snow
+8: Snow
+9: Fog
 10: Thundery
 11: Thunderstorm
