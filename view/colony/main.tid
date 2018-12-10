@@ -1,13 +1,20 @@
 title: $:/plugins/iceity/hive/view/colony/main
 caption: Colonies
 
-<$vars toggle="$:/temp/hive/view/colony">
-    <$reveal state=<<toggle>> text="edit" type="match">
-        <$transclude tiddler="$:/plugins/iceity/hive/mask/colony" mode="block" />
+<$wikify name="toggle" text="$:/temp/hive/<<currentTiddler>>/view">
+
+    <!-- Add new colony -->
+    <$reveal state=<<toggle>> text="add" type="match">
+        <$wikify name="target" text="$:/temp/hive/draft/colony">
+
+        <$transclude tiddler="$:/plugins/iceity/hive/mask/colony" />
+
+        </$wikify>
     </$reveal>
 
+    <!-- Show all colonies -->
     <$reveal default="all" state=<<toggle>> text="all" type="match">
-        <$button set=<<toggle>> setTo="edit">Add colony</$button>
+        <$button set=<<toggle>> setTo="add">Add colony</$button>
         <table>
             <thead>
                 <tr>
@@ -27,4 +34,5 @@ caption: Colonies
             </tbody>
         </table>
     </$reveal>
-</$vars>
+
+</$wikify>

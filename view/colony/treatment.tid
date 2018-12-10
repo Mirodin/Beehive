@@ -1,7 +1,7 @@
 title: $:/plugins/iceity/hive/view/colony/treatment
 caption: Treatments
 
-<$wikify name="toggle" text="$:/temp/hive/view/<<currentTiddler>>/treatment">
+<$wikify name="toggle" text="$:/temp/hive/<<currentTiddler>>/view/treatment">
 
     <!-- Show all treatments -->
     <$vars buttonText="Treatment" filter="[list[!!treatment]]">

@@ -1,7 +1,7 @@
 title: $:/plugins/iceity/hive/view/colony/inspection
 caption: Inspections
 
-<$wikify name="toggle" text="$:/temp/hive/view/<<currentTiddler>>/inspection">
+<$wikify name="toggle" text="$:/temp/hive/<<currentTiddler>>/view/inspection">
 
     <!-- Show all inspections -->
     <$vars buttonText="Inspection" filter="[list[!!inspection]]">

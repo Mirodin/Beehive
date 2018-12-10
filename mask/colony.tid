@@ -1,29 +1,25 @@
 title: $:/plugins/iceity/hive/mask/colony
 
-<$wikify name="target" text="$:/temp/hive/draft/colony">
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/name" />
 
-    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/name" />
+Hive: <$vars field="hive" filter="[record[hive]active[1]]">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
+</$vars>
+Parent: <$vars field="parent" filter="[record[colony]active[1]]">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
+</$vars>
+Source: <$vars field="source" filter="[record[source]]">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
+</$vars>
 
-    Hive: <$vars field="hive" filter="[record[hive]active[1]]">
-        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
+
+<$button set=<<toggle>> setTo="all">Save
+    <$vars newTitle=<<uid>>>
+        <$action-setfield $tiddler=<<target>> active="1" record="colony" title=<<newTitle>> />
+        <$action-setfield $tiddler=<<toggle>> target=<<newTitle>> />
+        <$action-deletetiddler $tiddler=<<target>> />
+        <$action-navigate $to=<<newTitle>> />
     </$vars>
-    Parent: <$vars field="parent" filter="[record[colony]active[1]]">
-        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
-    </$vars>
-    Source: <$vars field="source" filter="[record[source]]">
-        <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
-    </$vars>
-
-    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
-
-    <$button set=<<toggle>> setTo="show">Save
-        <$vars newTitle=<<uid>>>
-            <$action-setfield $tiddler=<<target>> active="1" record="colony" title=<<newTitle>> />
-            <$action-setfield $tiddler=<<toggle>> target=<<newTitle>> />
-            <$action-deletetiddler $tiddler=<<target>> />
-            <$action-navigate $to=<<newTitle>> />
-        </$vars>
-    </$button>
-    <$button set=<<toggle>> setTo="all">Cancel</$button>
-
-</$wikify>
+</$button>
+<$button set=<<toggle>> setTo="all">Cancel</$button>
