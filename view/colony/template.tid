@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/hive/view/colony/colony
+title: $:/plugins/iceity/hive/view/colony/template
 tags: $:/tags/ViewTemplate
 
 <$list filter="[is[current]record[colony]]">
