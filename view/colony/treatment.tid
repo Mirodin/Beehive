@@ -53,6 +53,10 @@ caption: Treatments
                             </$set>
                         </td>
                     </tr>
+                    <tr>
+                        <th>Amount</th>
+                        <td><$transclude tiddler=<<target>> field="amount" /></td>
+                    </tr>
                 </tbody>
             </table>
 

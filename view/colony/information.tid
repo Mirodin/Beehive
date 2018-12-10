@@ -10,10 +10,11 @@ caption: Informations
             <tr>
                 <th>Name</th>
                 <td><$transclude field="name" /></td>
-                <th>Active</th>
+                <th>Source</th>
                 <td>
-                    <$reveal state=!!active text="1" type="match">yes</$reveal>
-                    <$reveal state=!!active text="1" type="nomatch">no</$reveal>
+                    <$set name="source" field="source">
+                        <$transclude tiddler=<<source>> field="name" />
+                    </$set>
                 </td>
             </tr>
             <tr>
@@ -46,7 +47,11 @@ caption: Informations
     <!-- Show current states -->
     <table>
         <tbody>
-            <tr><th colspan="4">Current state</th></tr>
+            <tr><th colspan="3">Current state</th></tr>
+            <tr>
+                <th>Active</th>
+                <td colspan="2"><$checkbox field="active" checked="1" unchecked="0" /></td>
+            </tr>
             <tr>
                 <th>Frame count</th>
                 <$list filter="[list[!!inspection]!frames[]first[1]]">

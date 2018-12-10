@@ -49,6 +49,10 @@ caption: Harvests
                         <th>Amount</th>
                         <td><$transclude tiddler=<<target>> field="amount" /></td>
                     </tr>
+                    <tr>
+                        <th>Moisture</th>
+                        <td><$transclude tiddler=<<target>> field="moisture" /></td>
+                    </tr>
                 </tbody>
             </table>
 
