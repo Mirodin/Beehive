@@ -1,0 +1,16 @@
+title: $:/plugins/iceity/hive/mask/partial/configbutton
+
+<$reveal state=<<toggle>> text="add" type="match">
+    <$button set=<<toggle>> setTo="show">Save
+        <$vars newTitle=<<uid>>>
+            <$action-setfield $tiddler=<<target>> active="1" record=<<record>> title=<<newTitle>> />
+            <$action-setfield $tiddler=<<toggle>> target=<<newTitle>> />
+            <$action-deletetiddler $tiddler=<<target>> />
+        </$vars>
+    </$button>
+    <$button set=<<toggle>> setTo="all">Cancel</$button>
+</$reveal>
+
+<$reveal state=<<toggle>> text="edit" type="match">
+    <$button set=<<toggle>> setTo="show">OK</$button>
+</$reveal>

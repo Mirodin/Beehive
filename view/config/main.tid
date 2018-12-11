@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/hive/view/config/main
+caption: Configuration
+
+<$macrocall
+    $name="tabs"
+    default="$:/plugins/iceity/hive/view/config/beekeeper"
+    tabsList="$:/plugins/iceity/hive/view/config/beekeeper $:/plugins/iceity/hive/view/config/feed $:/plugins/iceity/hive/view/config/hivetype $:/plugins/iceity/hive/view/config/medication $:/plugins/iceity/hive/view/config/source"
+/>

@@ -1,0 +1,81 @@
+title: $:/plugins/iceity/hive/view/config/beekeeper
+caption: Beekeepers
+
+<$vars toggle="$:/temp/hive/config/beekeeper/view">
+
+    <!-- Add new beekeeper -->
+    <$reveal state=<<toggle>> text="add" type="match">
+        <$vars target="$:/temp/hive/draft/beekeeper">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/beekeeper" />
+
+        </$vars>
+    </$reveal>
+
+    <!-- Show all beekeepers -->
+    <$reveal default="all" state=<<toggle>> text="all" type="match">
+
+        <$button set=<<toggle>> setTo="add">Add beekeeper</$button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <$list filter="[record[beekeeper]active[1]sort[name]]">
+                    <tr>
+                        <td>
+                            <$button class="tc-btn-invisible tc-tiddlylink" set=<<toggle>> setTo="show">
+                                <$action-setfield $tiddler=<<toggle>> target=<<currentTiddler>> />
+                                <$transclude field="name" />
+                            </$button>
+                        </td>
+                        <td>
+                            <$set name="text" tiddler=<<currentTiddler>> field="text">
+                                <$macrocall $name="trim" text=<<text>> length=50 />
+                            </$set>
+                        </td>
+                    </tr>
+                </$list>
+            </tbody>
+        </table>
+
+    </$reveal>
+
+    <$set name="target" tiddler=<<toggle>> field="target">
+
+        <!-- Edit active beekeeper -->
+        <$reveal state=<<toggle>> text="edit" type="match">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/beekeeper" />
+
+        </$reveal>
+
+        <!-- Show active beekeeper details -->
+        <$reveal state=<<toggle>> text="show" type="match">
+
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <td><$transclude tiddler=<<target>> field="name" /></td>
+                    </tr>
+                    <tr>
+                        <th>Active since</th>
+                        <td><$transclude tiddler=<<target>> field="date" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <$transclude tiddler=<<target>> />
+
+            <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
+
+        </$reveal>
+
+    </$set>
+
+
+</$vars>

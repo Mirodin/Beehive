@@ -1,15 +1,15 @@
 title: $:/plugins/iceity/hive/view/colony/main
 caption: Colonies
 
-<$wikify name="toggle" text="$:/temp/hive/<<currentTiddler>>/view">
+<$vars toggle="$:/temp/hive/colony/view">
 
     <!-- Add new colony -->
     <$reveal state=<<toggle>> text="add" type="match">
-        <$wikify name="target" text="$:/temp/hive/draft/colony">
+        <$vars target="$:/temp/hive/draft/colony">
 
-        <$transclude tiddler="$:/plugins/iceity/hive/mask/colony" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/colony" />
 
-        </$wikify>
+        </$vars>
     </$reveal>
 
     <!-- Show all colonies -->
@@ -35,4 +35,4 @@ caption: Colonies
         </table>
     </$reveal>
 
-</$wikify>
+</$vars>
