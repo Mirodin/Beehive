@@ -58,8 +58,10 @@ caption: Inspections
                         <td><$transclude field="frames">-</$transclude></td>
                         <th>Honeyroom</th>
                         <td>
-                            <$reveal state="!!honeyroom" text="1" type="match">yes</$reveal>
-                            <$reveal state="!!honeyroom" text="1" type="nomatch">no</$reveal>
+                            <$wikify name="honeyroom" text="<<target>>!!honeyroom">
+                                <$reveal state=<<honeyroom>> text="1" type="match">yes</$reveal>
+                                <$reveal state=<<honeyroom>> text="1" type="nomatch">no</$reveal>
+                            </$wikify>
                         </td>
                     </tr>
                     <tr>
