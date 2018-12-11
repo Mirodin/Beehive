@@ -14,7 +14,7 @@ caption: Treatments
     <$reveal state=<<toggle>> text="add" type="match">
         <$wikify name="target" text="$:/temp/hive/<<currentTiddler>>/draft/treatment">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/treatment" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/colony/treatment" />
 
         </$wikify>
     </$reveal>
@@ -24,7 +24,7 @@ caption: Treatments
         <!-- Edit active treatment -->
         <$reveal state=<<toggle>> text="edit" type="match">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/treatment" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/colony/treatment" />
 
         </$reveal>
 

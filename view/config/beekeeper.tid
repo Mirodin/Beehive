@@ -7,7 +7,7 @@ caption: Beekeepers
     <$reveal state=<<toggle>> text="add" type="match">
         <$vars target="$:/temp/hive/draft/beekeeper">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/beekeeper" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/beekeeper" />
 
         </$vars>
     </$reveal>
@@ -49,7 +49,7 @@ caption: Beekeepers
         <!-- Edit active beekeeper -->
         <$reveal state=<<toggle>> text="edit" type="match">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/beekeeper" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/beekeeper" />
 
         </$reveal>
 

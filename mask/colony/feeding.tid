@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/hive/mask/feeding
+title: $:/plugins/iceity/hive/mask/colony/feeding
 
 Amount: <$edit-text tiddler=<<target>> field="amount" type="number" />
 Feed: <$vars field="feed" filter="[record[feed]active[1]]">

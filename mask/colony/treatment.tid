@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/hive/mask/treatment
+title: $:/plugins/iceity/hive/mask/colony/treatment
 
 Medication: <$vars field="medication" filter="[record[medication]active[1]]">
     <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
