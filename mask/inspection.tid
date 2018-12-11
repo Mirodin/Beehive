@@ -27,12 +27,12 @@ Weather conditions: <$select tiddler=<<target>> field="weather">
         <tr>
             <th>Current</th>
             <td>
-                <$list filter="[list[!!inspection]!frames[]first[1]]" emptyMessage="0">
+                <$list filter="[list[!!inspection]!frames[]first[1]]" emptyMessage="-">
                     <$transclude field="frames" />
                 </$list>
             </td>
             <td>
-                <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="no">
+                <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="-">
                     <$reveal state="!!honeyroom" text="1" type="match">yes</$reveal>
                     <$reveal state="!!honeyroom" text="1" type="nomatch">no</$reveal>
                 </$list>

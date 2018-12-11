@@ -13,7 +13,7 @@ caption: Informations
                 <th>Source</th>
                 <td>
                     <$set name="source" field="source">
-                        <$transclude tiddler=<<source>> field="name" />
+                        <$transclude tiddler=<<source>> field="name">-</$transclude>
                     </$set>
                 </td>
             </tr>
@@ -21,25 +21,25 @@ caption: Informations
                 <th>Parent</th>
                 <td>
                     <$set name="parent" field="parent">
-                        <$transclude tiddler=<<parent>> field="name" />
+                        <$transclude tiddler=<<parent>> field="name">-</$transclude>
                     </$set>
                 </td>
                 <th>Hive</th>
                 <td>
                     <$set name="hive" field="hive">
-                        <$transclude tiddler=<<hive>> field="name" />
+                        <$transclude tiddler=<<hive>> field="name">-</$transclude>
                     </$set>
                 </td>
             </tr>
             <tr>
                 <th>Beekeeper</th>
                 <td>
-                    <$list filter="[list[!!beekeeper]]">
+                    <$list filter="[list[!!beekeeper]]" emptyMessage="-">
                         <$transclude field="name" />
                     </$list>
                 </td>
                 <th>Date</th>
-                <td><$transclude field="date" /></td>
+                <td><$transclude field="date">-</$transclude></td>
             </tr>
         </tbody>
     </table>
@@ -54,7 +54,7 @@ caption: Informations
             </tr>
             <tr>
                 <th>Frame count</th>
-                <$list filter="[list[!!inspection]!frames[]first[1]]" emptyMessage="0">
+                <$list filter="[list[!!inspection]!frames[]first[1]]" emptyMessage="-">
                     <td>
                         <$transclude field="frames" />
                     </td>
@@ -65,7 +65,7 @@ caption: Informations
             </tr>
             <tr>
                 <th>Honeyroom</th>
-                <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="no">
+                <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="-">
                     <td>
                         <$reveal state="!!honeyroom" text="1" type="match">yes</$reveal>
                         <$reveal state="!!honeyroom" text="1" type="nomatch">yes</$reveal>
