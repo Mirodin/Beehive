@@ -35,18 +35,8 @@ caption: Feedings
 
                 <table>
                     <tbody>
-                        <tr>
-                            <th>Beekeeper</th>
-                            <td>
-                                <$list filter="[list[!!beekeeper]]">
-                                    <$transclude field="name" />
-                                </$list>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Date</th>
-                            <td><$transclude field="date" /></td>
-                        </tr>
+                        <tr><$transclude tiddler="$:/plugins/iceity/hive/view/partial/beekeeper" /></tr>
+                        <tr><$transclude tiddler="$:/plugins/iceity/hive/view/partial/date" /></tr>
                         <tr>
                             <th>Amount</th>
                             <td><$transclude field="amount" /></td>

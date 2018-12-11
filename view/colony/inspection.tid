@@ -36,14 +36,8 @@ caption: Inspections
                 <table>
                     <tbody>
                         <tr>
-                            <th>Beekeeper</th>
-                            <td>
-                                <$list filter="[list[!!beekeeper]]">
-                                    <$transclude field="name">-</$transclude>
-                                </$list>
-                            </td>
-                            <th>Date</th>
-                            <td><$transclude field="date">-</$transclude></td>
+                            <$transclude tiddler="$:/plugins/iceity/hive/view/partial/beekeeper" />
+                            <$transclude tiddler="$:/plugins/iceity/hive/view/partial/date" />
                         </tr>
                         <tr>
                             <th>Weather</th>

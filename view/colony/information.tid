@@ -32,14 +32,8 @@ caption: Informations
                 </td>
             </tr>
             <tr>
-                <th>Beekeeper</th>
-                <td>
-                    <$list filter="[list[!!beekeeper]]" emptyMessage="-">
-                        <$transclude field="name" />
-                    </$list>
-                </td>
-                <th>Date</th>
-                <td><$transclude field="date">-</$transclude></td>
+                <$transclude tiddler="$:/plugins/iceity/hive/view/partial/beekeeper" />
+                <$transclude tiddler="$:/plugins/iceity/hive/view/partial/date" />
             </tr>
         </tbody>
     </table>

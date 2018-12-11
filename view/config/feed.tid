@@ -43,14 +43,7 @@ caption: Feeds
                             <th>Active since</th>
                             <td><$transclude field="date" /></td>
                         </tr>
-                        <tr>
-                            <th>Beekeeper</th>
-                            <td>
-                                <$list filter="[list[!!beekeeper]]">
-                                    <$transclude field="name" />
-                                </$list>
-                            </td>
-                        </tr>
+                        <tr><$transclude tiddler="$:/plugins/iceity/hive/view/partial/beekeeper" /></tr>
                     </tbody>
                 </table>
 

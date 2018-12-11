@@ -1,0 +1,8 @@
+title: $:/plugins/iceity/hive/view/partial/beekeeper
+
+<th>Beekeeper</th>
+<td>
+    <$list filter="[list[!!beekeeper]]">
+        <$transclude field="name" />
+    </$list>
+</td>

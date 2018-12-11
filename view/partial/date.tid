@@ -1,0 +1,4 @@
+title: $:/plugins/iceity/hive/view/partial/date
+
+<th>Date</th>
+<td><$transclude field="date">-</$transclude></td>
