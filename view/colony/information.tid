@@ -54,7 +54,7 @@ caption: Informations
             </tr>
             <tr>
                 <th>Frame count</th>
-                <$list filter="[list[!!inspection]!frames[]first[1]]">
+                <$list filter="[list[!!inspection]!frames[]first[1]]" emptyMessage="0">
                     <td>
                         <$transclude field="frames" />
                     </td>
@@ -65,9 +65,10 @@ caption: Informations
             </tr>
             <tr>
                 <th>Honeyroom</th>
-                <$list filter="[list[!!inspection]!honeyroom[]first[1]]">
+                <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="no">
                     <td>
-                        <$transclude field="honeyroom" />
+                        <$reveal state="!!honeyroom" text="1" type="match">yes</$reveal>
+                        <$reveal state="!!honeyroom" text="1" type="nomatch">yes</$reveal>
                     </td>
                     <td>
                         <$transclude field="date" />
