@@ -1,19 +1,19 @@
-title: $:/plugins/iceity/hive/view/config/beekeeper
-caption: Beekeepers
+title: $:/plugins/iceity/hive/view/config/feed
+caption: Feeds
 
-<$vars toggle="$:/temp/hive/config/beekeeper/view">
+<$vars toggle="$:/temp/hive/config/feed/view">
 
-    <!-- Add new beekeeper -->
+    <!-- Add new feed -->
     <$reveal state=<<toggle>> text="add" type="match">
-        <$vars target="$:/temp/hive/draft/beekeeper">
+        <$vars target="$:/temp/hive/draft/feed">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/beekeeper" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/feed" />
 
         </$vars>
     </$reveal>
 
-    <!-- Show all beekeepers -->
-    <$vars buttonText="Beekeeper" filter="[record[beekeeper]active[1]sort[name]]">
+    <!-- Show all feeds -->
+    <$vars buttonText="Feeds" filter="[record[feed]active[1]sort[name]]">
 
         <$transclude tiddler="$:/plugins/iceity/hive/view/partial/allconfig" />
 
@@ -21,14 +21,14 @@ caption: Beekeepers
 
     <$set name="target" tiddler=<<toggle>> field="target">
 
-        <!-- Edit active beekeeper -->
+        <!-- Edit active feed -->
         <$reveal state=<<toggle>> text="edit" type="match">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/beekeeper" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/feed" />
 
         </$reveal>
 
-        <!-- Show active beekeeper details -->
+        <!-- Show active feed details -->
         <$reveal state=<<toggle>> text="show" type="match">
 
             <table>

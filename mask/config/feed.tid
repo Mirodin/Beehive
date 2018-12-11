@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/hive/mask/config/feed
+
+Name: <$edit-text tiddler=<<target>> field="name" />
+
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
+
+<$vars record="feed">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/buttonconfig" />
+</$vars>

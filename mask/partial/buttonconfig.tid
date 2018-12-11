@@ -1,4 +1,4 @@
-title: $:/plugins/iceity/hive/mask/partial/configbutton
+title: $:/plugins/iceity/hive/mask/partial/buttonconfig
 
 <$reveal state=<<toggle>> text="add" type="match">
     <$button set=<<toggle>> setTo="show">Save
