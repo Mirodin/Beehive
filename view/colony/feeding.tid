@@ -31,36 +31,40 @@ caption: Feedings
         <!-- Show active feeding details -->
         <$reveal state=<<toggle>> text="show" type="match">
 
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Beekeeper</th>
-                        <td>
-                            <$list filter="[list[!!beekeeper]]">
-                                <$transclude field="name" />
-                            </$list>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Date</th>
-                        <td><$transclude tiddler=<<target>> field="date" /></td>
-                    </tr>
-                    <tr>
-                        <th>Amount</th>
-                        <td><$transclude tiddler=<<target>> field="amount" /></td>
-                    </tr>
-                    <tr>
-                        <th>Feed</th>
-                        <td>
-                            <$set name="feed" tiddler=<<target>> field="feed">
-                                <$transclude tiddler=<<feed>> field="name" />
-                            </$set>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <$tiddler tiddler=<<target>>>
 
-            <$transclude tiddler=<<target>> />
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Beekeeper</th>
+                            <td>
+                                <$list filter="[list[!!beekeeper]]">
+                                    <$transclude field="name" />
+                                </$list>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <td><$transclude field="date" /></td>
+                        </tr>
+                        <tr>
+                            <th>Amount</th>
+                            <td><$transclude field="amount" /></td>
+                        </tr>
+                        <tr>
+                            <th>Feed</th>
+                            <td>
+                                <$set name="feed" field="feed">
+                                    <$transclude tiddler=<<feed>> field="name" />
+                                </$set>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            <$transclude />
+
+            </$tiddler>
 
             <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
 

@@ -31,32 +31,36 @@ caption: Harvests
         <!-- Show active harvest details -->
         <$reveal state=<<toggle>> text="show" type="match">
 
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Beekeeper</th>
-                        <td>
-                            <$list filter="[list[!!beekeeper]]">
-                                <$transclude field="name" />
-                            </$list>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Date</th>
-                        <td><$transclude tiddler=<<target>> field="date" /></td>
-                    </tr>
-                    <tr>
-                        <th>Amount</th>
-                        <td><$transclude tiddler=<<target>> field="amount" /></td>
-                    </tr>
-                    <tr>
-                        <th>Moisture</th>
-                        <td><$transclude tiddler=<<target>> field="moisture" /></td>
-                    </tr>
-                </tbody>
-            </table>
+            <$tiddler tiddler=<<target>>>
 
-            <$transclude tiddler=<<target>> />
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Beekeeper</th>
+                            <td>
+                                <$list filter="[list[!!beekeeper]]">
+                                    <$transclude field="name" />
+                                </$list>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <td><$transclude field="date" /></td>
+                        </tr>
+                        <tr>
+                            <th>Amount</th>
+                            <td><$transclude field="amount" /></td>
+                        </tr>
+                        <tr>
+                            <th>Moisture</th>
+                            <td><$transclude field="moisture" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <$transclude />
+
+            </$tiddler>
 
             <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
 

@@ -55,24 +55,15 @@ caption: Informations
             <tr>
                 <th>Frame count</th>
                 <$list filter="[list[!!inspection]!frames[]first[1]]" emptyMessage="-">
-                    <td>
-                        <$transclude field="frames" />
-                    </td>
-                    <td>
-                        <$transclude field="date" />
-                    </td>
+                    <td><$transclude field="frames" /></td>
+                    <td><$transclude field="date" /></td>
                 </$list>
             </tr>
             <tr>
                 <th>Honeyroom</th>
                 <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="-">
-                    <td>
-                        <$reveal state="!!honeyroom" text="1" type="match">yes</$reveal>
-                        <$reveal state="!!honeyroom" text="1" type="nomatch">yes</$reveal>
-                    </td>
-                    <td>
-                        <$transclude field="date" />
-                    </td>
+                    <td><$macrocall $name="either" field="!!honeyroom" /></td>
+                    <td><$transclude field="date" /></td>
                 </$list>
             </tr>
         </tbody>

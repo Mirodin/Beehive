@@ -31,20 +31,32 @@ caption: Feeds
         <!-- Show active feed details -->
         <$reveal state=<<toggle>> text="show" type="match">
 
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Name</th>
-                        <td><$transclude tiddler=<<target>> field="name" /></td>
-                    </tr>
-                    <tr>
-                        <th>Active since</th>
-                        <td><$transclude tiddler=<<target>> field="date" /></td>
-                    </tr>
-                </tbody>
-            </table>
+            <$tiddler tiddler=<<target>>>
 
-            <$transclude tiddler=<<target>> />
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td><$transclude field="name" /></td>
+                        </tr>
+                        <tr>
+                            <th>Active since</th>
+                            <td><$transclude field="date" /></td>
+                        </tr>
+                        <tr>
+                            <th>Beekeeper</th>
+                            <td>
+                                <$list filter="[list[!!beekeeper]]">
+                                    <$transclude field="name" />
+                                </$list>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <$transclude />
+                
+            </$tiddler>
 
             <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
 

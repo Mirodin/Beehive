@@ -30,21 +30,25 @@ caption: Beekeepers
 
         <!-- Show active beekeeper details -->
         <$reveal state=<<toggle>> text="show" type="match">
+        
+            <$tiddler tiddler=<<target>>
 
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Name</th>
-                        <td><$transclude tiddler=<<target>> field="name" /></td>
-                    </tr>
-                    <tr>
-                        <th>Active since</th>
-                        <td><$transclude tiddler=<<target>> field="date" /></td>
-                    </tr>
-                </tbody>
-            </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td><$transclude> field="name" /></td>
+                        </tr>
+                        <tr>
+                            <th>Active since</th>
+                            <td><$transclude field="date" /></td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <$transclude tiddler=<<target>> />
+                <$transclude />
+
+            </$tiddler>
 
             <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
 
