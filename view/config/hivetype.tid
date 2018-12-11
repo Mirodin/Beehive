@@ -1,0 +1,81 @@
+title: $:/plugins/iceity/hive/view/config/hivetype
+caption: Hivetypes
+
+<$vars toggle="$:/temp/hive/config/hivetype/view">
+
+    <!-- Add new hivetype -->
+    <$reveal state=<<toggle>> text="add" type="match">
+        <$vars target="$:/temp/hive/draft/hivetype">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/hivetype" />
+
+        </$vars>
+    </$reveal>
+
+    <!-- Show all hivetypes -->
+    <$vars buttonText="hivetypes" filter="[record[hivetype]active[1]sort[name]]">
+
+        <$transclude tiddler="$:/plugins/iceity/hive/view/partial/allconfig" />
+
+    </$vars>
+
+    <$set name="target" tiddler=<<toggle>> field="target">
+
+        <!-- Edit active hivetype -->
+        <$reveal state=<<toggle>> text="edit" type="match">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/hivetype" />
+
+        </$reveal>
+
+        <!-- Show active hivetype details -->
+        <$reveal state=<<toggle>> text="show" type="match">
+
+            <$tiddler tiddler=<<target>>>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td><$transclude field="name" /></td>
+                        </tr>
+                        <tr>
+                            <th>Active since</th>
+                            <td><$transclude field="date" /></td>
+                        </tr>
+                        <tr><$transclude tiddler="$:/plugins/iceity/hive/view/partial/beekeeper" /></tr>
+                        <tr>
+                            <th>Height</th>
+                            <td><$transclude field="height" /></td>
+                        </tr>
+                        <tr>
+                            <th>Width</th>
+                            <td><$transclude field="width" /></td>
+                        </tr>
+                        <tr>
+                            <th>Max. frames</th>
+                            <td><$transclude field="frames" /></td>
+                        </tr>
+                        <tr>
+                            <th>Frame height</th>
+                            <td><$transclude field="frame-height" /></td>
+                        </tr>
+                        <tr>
+                            <th>Frame width</th>
+                            <td><$transclude field="frame-width" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <$transclude />
+
+            </$tiddler>
+
+            <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
+
+        </$reveal>
+
+    </$set>
+
+
+</$vars>

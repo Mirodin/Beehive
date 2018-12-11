@@ -1,0 +1,17 @@
+title: $:/plugins/iceity/hive/mask/config/hivetype
+
+Name: <$edit-text tiddler=<<target>> field="name" />
+
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
+
+Height: <$edit-text tiddler=<<target>> field="height" type="number" />
+Width: <$edit-text tiddler=<<target>> field="width" type="number" />
+
+Max. frames: <$edit-text tiddler=<<target>> field="frames" type="number" />
+
+Frame height: <$edit-text tiddler=<<target>> field="frame-height" type="number" />
+Frame width: <$edit-text tiddler=<<target>> field="frame-width" type="number" />
+
+<$vars record="hivetype">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/buttonconfig" />
+</$vars>
