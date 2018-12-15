@@ -13,7 +13,7 @@ caption: Hivetypes
     </$reveal>
 
     <!-- Show all hivetypes -->
-    <$vars buttonText="hivetypes" filter="[record[hivetype]active[1]sort[name]]">
+    <$vars buttonText="Hivetype" filter="[record[hivetype]active[1]sort[name]]">
 
         <$transclude tiddler="$:/plugins/iceity/hive/view/partial/allconfig" />
 

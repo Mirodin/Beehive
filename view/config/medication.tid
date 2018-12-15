@@ -1,19 +1,19 @@
-title: $:/plugins/iceity/hive/view/config/feed
-caption: Feeds
+title: $:/plugins/iceity/hive/view/config/medication
+caption: Medications
 
-<$vars toggle="$:/temp/hive/config/feed/view">
+<$vars toggle="$:/temp/hive/config/medication/view">
 
-    <!-- Add new feed -->
+    <!-- Add new medication -->
     <$reveal state=<<toggle>> text="add" type="match">
-        <$vars target="$:/temp/hive/draft/feed">
+        <$vars target="$:/temp/hive/draft/medication">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/feed" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/medication" />
 
         </$vars>
     </$reveal>
 
-    <!-- Show all feeds -->
-    <$vars buttonText="Feed" filter="[record[feed]active[1]sort[name]]">
+    <!-- Show all medications -->
+    <$vars buttonText="Medication" filter="[record[medication]active[1]sort[name]]">
 
         <$transclude tiddler="$:/plugins/iceity/hive/view/partial/allconfig" />
 
@@ -21,14 +21,14 @@ caption: Feeds
 
     <$set name="target" tiddler=<<toggle>> field="target">
 
-        <!-- Edit active feed -->
+        <!-- Edit active medication -->
         <$reveal state=<<toggle>> text="edit" type="match">
 
-            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/feed" />
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/medication" />
 
         </$reveal>
 
-        <!-- Show active feed details -->
+        <!-- Show active medication details -->
         <$reveal state=<<toggle>> text="show" type="match">
 
             <$tiddler tiddler=<<target>>>
