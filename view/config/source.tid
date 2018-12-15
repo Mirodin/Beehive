@@ -1,0 +1,61 @@
+title: $:/plugins/iceity/hive/view/config/source
+caption: Sources
+
+<$vars toggle="$:/temp/hive/config/source/view">
+
+    <!-- Add new source -->
+    <$reveal state=<<toggle>> text="add" type="match">
+        <$vars target="$:/temp/hive/draft/source">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/source" />
+
+        </$vars>
+    </$reveal>
+
+    <!-- Show all sources -->
+    <$vars buttonText="Source" filter="[record[source]active[1]sort[name]]">
+
+        <$transclude tiddler="$:/plugins/iceity/hive/view/partial/allconfig" />
+
+    </$vars>
+
+    <$set name="target" tiddler=<<toggle>> field="target">
+
+        <!-- Edit active source -->
+        <$reveal state=<<toggle>> text="edit" type="match">
+
+            <$transclude tiddler="$:/plugins/iceity/hive/mask/config/source" />
+
+        </$reveal>
+
+        <!-- Show active source details -->
+        <$reveal state=<<toggle>> text="show" type="match">
+
+            <$tiddler tiddler=<<target>>>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td><$transclude field="name" /></td>
+                        </tr>
+                        <tr>
+                            <th>Active since</th>
+                            <td><$transclude field="date" /></td>
+                        </tr>
+                        <tr><$transclude tiddler="$:/plugins/iceity/hive/view/partial/beekeeper" /></tr>
+                    </tbody>
+                </table>
+
+                <$transclude />
+
+            </$tiddler>
+
+            <$transclude tiddler="$:/plugins/iceity/hive/view/partial/button" />
+
+        </$reveal>
+
+    </$set>
+
+
+</$vars>

@@ -1,7 +1,7 @@
 title: $:/plugins/iceity/hive/mask/colony/feeding
 
 Amount: <$edit-text tiddler=<<target>> field="amount" type="number" />
-Feed: <$vars field="feed" filter="[record[feed]active[1]]">
+Feed: <$vars field="feed" filter="[record[feed]active[1]sort[name]">
     <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
 </$vars>
 

@@ -1,0 +1,9 @@
+title: $:/plugins/iceity/hive/mask/config/source
+
+Name: <$edit-text tiddler=<<target>> field="name" />
+
+<$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
+
+<$vars record="source">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/buttonconfig" />
+</$vars>
