@@ -40,9 +40,7 @@ caption: Treatments
                         <tr>
                             <th>Medication</th>
                             <td>
-                                <$set name="medication" field="medication">
-                                    <$transclude tiddler=<<medication>> field="name" />
-                                </$set>
+                                <$transclude tiddler={{!!medication}} field="name" />
                             </td>
                         </tr>
                         <tr>

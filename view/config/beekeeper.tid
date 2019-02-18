@@ -30,7 +30,7 @@ caption: Beekeepers
 
         <!-- Show active beekeeper details -->
         <$reveal state=<<toggle>> text="show" type="match">
-        
+
             <$tiddler tiddler=<<target>>
 
                 <table>

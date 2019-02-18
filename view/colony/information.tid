@@ -12,23 +12,17 @@ caption: Informations
                 <td><$transclude field="name" /></td>
                 <th>Source</th>
                 <td>
-                    <$set name="source" field="source">
-                        <$transclude tiddler=<<source>> field="name">-</$transclude>
-                    </$set>
+                    <$transclude tiddler={{!!source}} field="name">-</$transclude>
                 </td>
             </tr>
             <tr>
                 <th>Parent</th>
                 <td>
-                    <$set name="parent" field="parent">
-                        <$transclude tiddler=<<parent>> field="name">-</$transclude>
-                    </$set>
+                    <$transclude tiddler={{!!parent}} field="name">-</$transclude>
                 </td>
                 <th>Hive</th>
                 <td>
-                    <$set name="hive" field="hive">
-                        <$transclude tiddler=<<hive>> field="name">-</$transclude>
-                    </$set>
+                    <$transclude tiddler={{!!hive}} field="name">-</$transclude>
                 </td>
             </tr>
             <tr>

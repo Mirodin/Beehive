@@ -44,9 +44,7 @@ caption: Feedings
                         <tr>
                             <th>Feed</th>
                             <td>
-                                <$set name="feed" field="feed">
-                                    <$transclude tiddler=<<feed>> field="name" />
-                                </$set>
+                                <$transclude tiddler={{!!feed}} field="name" />
                             </td>
                         </tr>
                     </tbody>
