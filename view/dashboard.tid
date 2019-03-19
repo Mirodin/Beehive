@@ -15,7 +15,7 @@ caption: Dashboard
             <tr>
                 <td><$transclude field="date" /></td>
                 <$list filter="[record[colony]search:task<currentTiddler>]">
-                    <td><$link to=<<currentTiddler>>><$transclude field="caption" /></$link></td>
+                    <td><$link to=<<currentTiddler>>><$transclude field="name" /></$link></td>
                 </$list>
                 <td><$transclude field="text" /></td>
             </tr>
