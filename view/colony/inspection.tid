@@ -42,7 +42,7 @@ caption: Inspections
                         <tr>
                             <th>Weather</th>
                             <td>
-                                <$set name="index" field="weather" emptyValue="0">
+                                <$set name="index" tiddler=<<currentTiddler>> field="weather" emptyValue="0">
                                     <$transclude tiddler="$:/plugins/iceity/hive/tiddler/weather" index=<<index>> />
                                 </$set>
                             </td>
@@ -58,13 +58,13 @@ caption: Inspections
                         <tr>
                             <th>Population</th>
                             <td>
-                                <$set name="index" field="population" emptyValue="0">
+                                <$set name="index" tiddler=<<currentTiddler>> field="population" emptyValue="0">
                                     <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>>>-</$transclude>
                                 </$set>
                             </td>
                             <th>Temperament</th>
                             <td>
-                                <$set name="index" field="temperament" emptyValue="0">
+                                <$set name="index" tiddler=<<currentTiddler>> field="temperament" emptyValue="0">
                                     <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>>>-</$transclude>
                                 </$set>
                             </td>
@@ -72,12 +72,12 @@ caption: Inspections
                         <tr>
                             <th>Brood pattern</th>
                             <td>
-                                <$set name="index" field="pattern" emptyValue="0">
+                                <$set name="index" tiddler=<<currentTiddler>> field="pattern" emptyValue="0">
                                     <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>>>-</$transclude>
                                 </$set>
                             </td>
-                            <th>Weight</th>
-                            <td><$transclude field="weight">-</$transclude> kg</td>
+                            <th>Weight (kg)</th>
+                            <td><$transclude field="weight">-</$transclude></td>
                         </tr>
                         <tr>
                             <th>Queen seen</th>
