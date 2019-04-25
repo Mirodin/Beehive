@@ -38,14 +38,14 @@ caption: Feedings
                         <tr><$transclude tiddler="$:/plugins/iceity/hive/view/partial/beekeeper" /></tr>
                         <tr><$transclude tiddler="$:/plugins/iceity/hive/view/partial/date" /></tr>
                         <tr>
-                            <th>Amount</th>
-                            <td><$transclude field="amount" /></td>
-                        </tr>
-                        <tr>
                             <th>Feed</th>
                             <td>
                                 <$transclude tiddler={{!!feed}} field="name" />
                             </td>
+                        </tr>
+                        <tr>
+                            <th>Amount</th>
+                            <td><$transclude field="amount" /></td>
                         </tr>
                     </tbody>
                 </table>
