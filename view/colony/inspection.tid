@@ -52,8 +52,8 @@ caption: Inspections
                         <tr>
                             <th>Frames</th>
                             <td><$transclude field="frames">-</$transclude></td>
-                            <th>Honeyroom</th>
-                            <td><$macrocall $name="either" field="!!honeyroom" /></td>
+                            <th>Honeyrooms</th>
+                            <td><$transclude field="honeyroom">-</$transclude></td>
                         </tr>
                         <tr>
                             <th>Population</th>

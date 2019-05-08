@@ -48,9 +48,9 @@ caption: Informations
                 </$list>
             </tr>
             <tr>
-                <th>Honeyroom</th>
+                <th>Honeyrooms</th>
                 <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="-">
-                    <td><$macrocall $name="either" field="!!honeyroom" /></td>
+                    <td><$transclude field="honeyroom" /></td>
                     <td><$transclude field="date" /></td>
                 </$list>
             </tr>

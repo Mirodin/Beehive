@@ -20,7 +20,7 @@ Weather conditions: <$select tiddler=<<target>> field="weather">
         <tr>
             <th></th>
             <th>Frames</th>
-            <th>Honeyroom</th>
+            <th>Honeyrooms</th>
         </tr>
     </thead>
     <tbody>
@@ -33,18 +33,14 @@ Weather conditions: <$select tiddler=<<target>> field="weather">
             </td>
             <td>
                 <$list filter="[list[!!inspection]!honeyroom[]first[1]]" emptyMessage="-">
-                    <$reveal state="!!honeyroom" text="1" type="match">yes</$reveal>
-                    <$reveal state="!!honeyroom" text="1" type="nomatch">no</$reveal>
+                    <$transclude field="honeyroom" />
                 </$list>
             </td>
         </tr>
         <tr>
             <th>New</th>
             <td><$edit-text tiddler=<<target>> field="frames" type="number" /></td>
-            <td>
-                <$radio tiddler=<<target>> field="honeyroom" value="1">added</$radio>
-                <$radio tiddler=<<target>> field="honeyroom" value="0">removed</$radio>
-            </td>
+            <td><$edit-text tiddler=<<target>> field="honeyroom" type="number" /></td>
         </tr>
     </tbody>
 </table>
