@@ -4,7 +4,7 @@ tags: $:/tags/ViewTemplate
 <$list filter="[is[current]record[colony]]">
     <$macrocall
         $name="tabs"
-        default="$:/plugins/iceity/hive/view/colony/inspection"
-        tabsList="$:/plugins/iceity/hive/view/colony/inspection $:/plugins/iceity/hive/view/colony/task $:/plugins/iceity/hive/view/colony/feeding $:/plugins/iceity/hive/view/colony/harvest $:/plugins/iceity/hive/view/colony/treatment $:/plugins/iceity/hive/view/colony/information"
+        default="$:/plugins/iceity/hive/view/colony/information"
+        tabsList="$:/plugins/iceity/hive/view/colony/information $:/plugins/iceity/hive/view/colony/inspection $:/plugins/iceity/hive/view/colony/task $:/plugins/iceity/hive/view/colony/harvest"
     />
 </$list>

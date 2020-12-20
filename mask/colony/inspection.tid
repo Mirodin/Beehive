@@ -13,19 +13,19 @@ Weather conditions: <$select tiddler=<<target>> field="weather">
 
 <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/action" />
 
-! Hive state
+!! Hive state (optional)
 
 <table>
     <thead>
         <tr>
             <th></th>
             <th>Frames</th>
-            <th>Honeyrooms</th>
+            <th>Honeyroom</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th>Current</th>
+            <th>Old</th>
             <td>
                 <$list filter="[list[!!inspection]!frames[]first[1]]" emptyMessage="-">
                     <$transclude field="frames" />
@@ -45,25 +45,36 @@ Weather conditions: <$select tiddler=<<target>> field="weather">
     </tbody>
 </table>
 
-! Observations
+!! Observations (optional)
 
 <$checkbox tiddler=<<target>> field="pins" checked="1">Pins seen</$checkbox>
-
 <$checkbox tiddler=<<target>> field="queen" checked="1">Queen seen</$checkbox>
-
-Mite Drop: <$edit-text tiddler=<<target>> field="mites" type="number" />
-
-Brood pattern: <$vars field="pattern">
-    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/rate" />
-</$vars>
 
 Population: <$vars field="population">
     <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/rate" />
 </$vars>
-
 Temperament: <$vars field="temperament">
     <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/rate" />
 </$vars>
+Brood pattern: <$vars field="pattern">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/rate" />
+</$vars>
+
+Mite Drop: <$edit-text tiddler=<<target>> field="mites" type="number" />
+
+!! Feeding (optional)
+
+Feed: <$vars field="feed" filter="[record[feed]active[1]sort[name]]">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
+</$vars>
+Quantity: <$edit-text tiddler=<<target>> field="quantity" type="number" />
+
+!! Treatment (optional)
+
+Medication: <$vars field="medication" filter="[record[medication]active[1]]">
+    <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/select" />
+</$vars>
+Amount: <$edit-text tiddler=<<target>> field="amount" type="number" />
 
 <$vars record="inspection">
     <$transclude tiddler="$:/plugins/iceity/hive/mask/partial/button" />

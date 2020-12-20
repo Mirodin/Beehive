@@ -62,12 +62,18 @@ caption: Inspections
                                     <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>>>-</$transclude>
                                 </$set>
                             </td>
+                            <th>Weight (kg)</th>
+                            <td><$transclude field="weight">-</$transclude></td>
+                        </tr>
+                        <tr>
                             <th>Temperament</th>
                             <td>
                                 <$set name="index" tiddler=<<currentTiddler>> field="temperament" emptyValue="0">
                                     <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>>>-</$transclude>
                                 </$set>
                             </td>
+                            <th>Mites</th>
+                            <td><$transclude field="mites">-</$transclude></td>
                         </tr>
                         <tr>
                             <th>Brood pattern</th>
@@ -76,14 +82,24 @@ caption: Inspections
                                     <$transclude tiddler="$:/plugins/iceity/hive/tiddler/rate" index=<<index>>>-</$transclude>
                                 </$set>
                             </td>
-                            <th>Weight (kg)</th>
-                            <td><$transclude field="weight">-</$transclude></td>
+                            <th>Feed</th>
+                            <td>
+                                <$reveal state="!!quantity" text="" type="nomatch">
+                                    <$transclude tiddler={{!!feed}} field="name" />:
+                                    <$transclude field="quantity" /> l
+                                </$reveal>
+                            </td>
                         </tr>
                         <tr>
                             <th>Queen seen</th>
                             <td><<either !!queen>></td>
-                            <th>Mites</th>
-                            <td><$transclude field="mites">-</$transclude></td>
+                            <th>Medication</th>
+                            <td>
+                                <$reveal state="!!amount" text="" type="nomatch">
+                                    <$transclude tiddler={{!!medication}} field="name" />:
+                                    <$transclude field="amount" /> ml
+                                </$reveal>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
