@@ -31,13 +31,13 @@ caption: Beekeepers
         <!-- Show active beekeeper details -->
         <$reveal state=<<toggle>> text="show" type="match">
 
-            <$tiddler tiddler=<<target>>
+            <$tiddler tiddler=<<target>>>
 
                 <table>
                     <tbody>
                         <tr>
                             <th>Name</th>
-                            <td><$transclude> field="name" /></td>
+                            <td><$transclude field="name" /></td>
                         </tr>
                         <tr>
                             <th>Active since</th>
@@ -55,6 +55,5 @@ caption: Beekeepers
         </$reveal>
 
     </$set>
-
 
 </$vars>
